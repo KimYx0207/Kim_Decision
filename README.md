@@ -6,7 +6,7 @@
 <p>
   Language:
   <a href="README.md">English</a> |
-  <a href="README.zh-CN.md">Simplified Chinese</a>
+  <a href="README.zh-CN.md">简体中文</a>
 </p>
 
 <p>
