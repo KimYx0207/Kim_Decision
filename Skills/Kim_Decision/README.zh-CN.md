@@ -4,6 +4,7 @@
 <p style="font-size: 1.1em; color: #7c3aed; font-weight: 600; margin-top: 0;">判断与交付协议</p>
 
 <p>
+  语言：
   <a href="README.md">English</a> |
   <a href="README.zh-CN.md">简体中文</a>
 </p>
@@ -11,7 +12,7 @@
 <p>
   <img alt="Runtime" src="https://img.shields.io/badge/runtime-Claude%20Code%20%7C%20Codex%20%7C%20OpenClaw%20%7C%20Cursor-111827"/>
   <img alt="Skill" src="https://img.shields.io/badge/type-Agent%20Skill-7c3aed"/>
-  <img alt="Stars" src="https://img.shields.io/github/stars/KimYx0207/laojin-skill?style=flat&logo=github"/>
+  <img alt="Stars" src="https://img.shields.io/github/stars/KimYx0207/Kim_Decision?style=flat&logo=github"/>
   <img alt="License" src="https://img.shields.io/badge/license-MIT%20OR%20Apache--2.0-green"/>
 </p>
 
@@ -219,9 +220,9 @@ X <a href="https://x.com/KimYx0207">@KimYx0207</a> |
 飞书知识库：
 <a href="https://my.feishu.cn/wiki/OhQ8wqntFihcI1kWVDlcNdpznFf">长期更新入口</a>
 
-### 请老金喝杯咖啡
+### 请我一杯咖啡
 
-如果老金 Skill 对你有帮助，欢迎请我喝杯咖啡，算是对持续维护的支持。
+如果 KIM Skill 帮到了你，欢迎请我喝杯咖啡，算是对持续维护的支持。
 
 <table align="center">
 <tr><th>微信支付</th><th>支付宝</th></tr>
@@ -233,7 +234,7 @@ X <a href="https://x.com/KimYx0207">@KimYx0207</a> |
 
 ### 方法依据
 
-老金 Skill 的方法论基础来自我（KimYx0207）撰写的"基于元的意图放大"研究：
+KIM Skill 的方法论基础来自本项目维护者（KimYx0207）撰写的"基于元的意图放大"研究：
 
 - 论文：<https://zenodo.org/records/18957649>
 - DOI：`10.5281/zenodo.18957649`
