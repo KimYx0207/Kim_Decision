@@ -5,7 +5,7 @@
 
 <p>
   语言：
-  <a href="README.md">English</a> |
+  <a href="README.md">英文</a> |
   <a href="README.zh-CN.md">简体中文</a>
 </p>
 
