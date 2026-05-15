@@ -4,15 +4,14 @@
 <p style="font-size: 1.1em; color: #7c3aed; font-weight: 600; margin-top: 0;">DECISION & DELIVERY PROTOCOL</p>
 
 <p>
-  Language:
   <a href="README.md">English</a> |
-  <a href="README.zh-CN.md">Simplified Chinese</a>
+  <a href="README.zh-CN.md">简体中文</a>
 </p>
 
 <p>
   <img alt="Runtime" src="https://img.shields.io/badge/runtime-Claude%20Code%20%7C%20Codex%20%7C%20OpenClaw%20%7C%20Cursor-111827"/>
   <img alt="Skill" src="https://img.shields.io/badge/type-Agent%20Skill-7c3aed"/>
-  <img alt="Stars" src="https://img.shields.io/github/stars/KimYx0207/Kim_Decision?style=flat&logo=github"/>
+  <img alt="Stars" src="https://img.shields.io/github/stars/KimYx0207/laojin-skill?style=flat&logo=github"/>
   <img alt="License" src="https://img.shields.io/badge/license-MIT%20OR%20Apache--2.0-green"/>
 </p>
 
@@ -22,9 +21,9 @@
 
 **KIM Skill** is what happens when I distill my own lifetime of hard-won decisions into a protocol.
 
-I have been breaking things, fixing things, and making judgment calls under pressure for years - mostly while cursing at code and questioning life choices. This skill is my **distillation**: everything that actually worked, stripped of the profanity (mostly), compressed into a structured method that AI agents can follow.
+I have been breaking things, fixing things, and making judgment calls under pressure for years — mostly while cursing at code and questioning life choices. This skill is my **distillation**: everything that actually worked, stripped of the profanity (mostly), compressed into a structured method that AI agents can follow.
 
-Most AI skills tell the model *what style to use*. KIM asks a different question: **does the agent actually have a method for reaching a usable result - or is it just improvising with confidence?**
+Most AI skills tell the model *what style to use*. KIM asks a different question: **does the agent actually have a method for reaching a usable result — or is it just improvising with confidence?**
 
 > Think of it as extracting the "judgment yeast" from years of fermented experience, then bottling it so any AI can pour a shot.
 
@@ -66,7 +65,7 @@ flowchart LR
     style O fill:#fbbf24,stroke:#d97706,color:#000,stroke-width:2px
 ```
 
-The operating layer stays abstract - no hardcoded personas. The delivery layer allows concrete evidence when real names, cases, data, or file paths improve trust.
+The operating layer stays abstract — no hardcoded personas. The delivery layer allows concrete evidence when real names, cases, data, or file paths improve trust.
 
 ### One-line summary
 
@@ -98,14 +97,14 @@ Decision:  Wait. Ship the fix for onboarding drop-off first.
 Do now:
 1. Ship the onboarding fix (already 80% done, 2 days max)
 2. Run it past 5 beta users for sanity check
-3. If >= 4/5 say "this is clearer" -> launch next week
+3. If ≥ 4/5 say "this is clearer" → launch next week
 
 Do not do:
 - Launch today and patch onboarding later
 - Add new features before fixing the drop-off
 
 Pass condition:
-Onboarding completion rate >= 60% in test cohort (current: 34%)
+Onboarding completion rate ≥ 60% in test cohort (current: 34%)
 ```
 
 **You ask:**
@@ -116,29 +115,29 @@ Onboarding completion rate >= 60% in test cohort (current: 34%)
 
 ```
 ## Breakdown
-- Intent: Convert free users to paid at >=3% rate (current: 0.94%)
+- Intent: Convert free users to paid at ≥3% rate (current: 0.94%)
 - Subject: Free-tier users who hit the 3-export paywall
-- Path: Sign up -> hit export limit -> see upgrade CTA -> convert or churn
-- Constraint: 4 weeks no engineering (CTO confirmed 2026-05-10), 2-person marketing, budget <= CNY 5000
-- Acceptance: Paid conversion rate >=3% within 8 weeks, verified via Stripe Dashboard
+- Path: Sign up → hit export limit → see upgrade CTA → convert or churn
+- Constraint: 4 weeks no engineering (CTO confirmed 2026-05-10), 2-person marketing, budget ≤¥5000
+- Acceptance: Paid conversion rate ≥3% within 8 weeks, verified via Stripe Dashboard
 
 ## Decision
 The paywall hits too early. Users haven't experienced enough value to pay.
 
 ## Path
 - Motive: Users sign up to solve an immediate problem, not to buy a subscription
-- Interpretation: Paywall at 3 exports feels like a trap - no dependency built yet
+- Interpretation: Paywall at 3 exports feels like a trap — no dependency built yet
 - Action: Push paywall trigger from 3 exports to 10 (LaunchDarkly toggle, no deploy)
 - Resistance: If core feature isn't sticky, users churn before 10 exports too
-- Signal: Upgrade page visits without conversion = value gap (Google Analytics -> Behavior Flow)
+- Signal: Upgrade page visits without conversion = value gap (Google Analytics → Behavior Flow)
 - State change: Users hit paywall after building real workflow, not on first session
-- Continuation: Post-conversion retention correlates with DAU >=3x/week (Product lead Zhang Wei's cohort analysis, 2026-04)
+- Continuation: Post-conversion retention correlates with DAU ≥3x/week (Product lead Zhang Wei's cohort analysis, 2026-04)
 
 ## Evidence
 - Confirmed: 5000 free users, 47 paid conversions, paywall at 3 exports (Stripe Dashboard, 2026-04)
 - User-provided: No engineering for 4 weeks (CTO Li Ming, sprint planning 2026-05-10)
 - Inference: First-session paywall users convert <2%; day-7+ users convert ~8% (Zhang Wei's cohort analysis)
-- Unconfirmed: Competitor paywall thresholds (Notion, Coda, Airtable - all unverified); user session length not segmented by cohort
+- Unconfirmed: Competitor paywall thresholds (Notion, Coda, Airtable — all unverified); user session length not segmented by cohort
 
 ## Data gaps
 - Competitor paywall trigger points: if competitors use 5 exports, our 10 overshoots; if 15, we're conservative. Manual check needed before A/B test design.
@@ -146,29 +145,29 @@ The paywall hits too early. Users haven't experienced enough value to pay.
 
 ## Minimum test
 - Goal: Validate that delayed paywall increases conversion intent
-- Input: 200 users approaching paywall (Google Analytics -> Events -> "export_click" where count >= 2)
-- Action: Toggle PAYWALL_TRIGGER from 3 -> 10 in LaunchDarkly (PM self-serve, no engineering)
+- Input: 200 users approaching paywall (Google Analytics → Events → "export_click" where count ≥ 2)
+- Action: Toggle PAYWALL_TRIGGER from 3 → 10 in LaunchDarkly (PM self-serve, no engineering)
 - Output: Upgrade page CTR + 14-day paid conversion rate
-- Pass condition: CTR >=12% (current: 6%); conversion >=3% in test cohort
+- Pass condition: CTR ≥12% (current: 6%); conversion ≥3% in test cohort
 - Fail signal: CTR unchanged or total export usage drops >15%
-- Next step: If pass -> request segmented session report from Zhang Wei -> full rollout via LaunchDarkly
+- Next step: If pass → request segmented session report from Zhang Wei → full rollout via LaunchDarkly
 - Do not do: Change pricing tiers or redesign pricing page before confirming paywall timing
 
 ## Gates
-- Evidence gate: PASS - confirmed data from Stripe + Google Analytics; inference sourced from named team member with date
-- Data gap gate: HOLD - competitor thresholds and segmented session data unconfirmed; do not proceed to full rollout until resolved
-- Minimum test gate: NOT STARTED - requires LaunchDarkly config + cohort selection via GA
+- Evidence gate: PASS — confirmed data from Stripe + Google Analytics; inference sourced from named team member with date
+- Data gap gate: HOLD — competitor thresholds and segmented session data unconfirmed; do not proceed to full rollout until resolved
+- Minimum test gate: NOT STARTED — requires LaunchDarkly config + cohort selection via GA
 
 ## Model check
 - Friction: Paywall placed too early = premature friction = rejection, not conversion
 - Incentive: Users need 7+ days to build habit before paywall feels like fair value exchange
 
 ## Usable result
-1. Toggle PAYWALL_TRIGGER from 3 -> 10 in LaunchDarkly (PM self-serve, no ticket)
-2. Select 200-user cohort: Google Analytics -> Events -> "export_click" where count >= 2
+1. Toggle PAYWALL_TRIGGER from 3 → 10 in LaunchDarkly (PM self-serve, no ticket)
+2. Select 200-user cohort: Google Analytics → Events → "export_click" where count ≥ 2
 3. Run 2-week A/B; monitor CTR in GA + conversion in Stripe Dashboard
-4. If CTR >=12% AND conversion >=3% -> get Zhang Wei's segmented report -> full rollout
-5. If fail -> pause; investigate session length by segment before changing strategy
+4. If CTR ≥12% AND conversion ≥3% → get Zhang Wei's segmented report → full rollout
+5. If fail → pause; investigate session length by segment before changing strategy
 ```
 
 Every answer must be specific enough to act on immediately. If it is not, the answer is a list of questions to resolve first.
@@ -178,22 +177,22 @@ Every answer must be specific enough to act on immediately. If it is not, the an
 **Personal install** (available in every project):
 
 ```bash
-mkdir -p ~/.claude/skills && cp -R Skills/Kim_Decision ~/.claude/skills/laojin
+mkdir -p ~/.claude/skills && cp -R laojin ~/.claude/skills/laojin
 ```
 
 **Project install** (scoped to one repo):
 
 ```bash
-mkdir -p .claude/skills && cp -R Skills/Kim_Decision .claude/skills/laojin
+mkdir -p .claude/skills && cp -R laojin .claude/skills/laojin
 ```
 
 Recommended reading order:
 
-1. `Skills/Kim_Decision/SKILL.md` - the full operating protocol
-2. `Skills/Kim_Decision/references/method.md` - the frame with examples
-3. `Skills/Kim_Decision/references/path.md` - subject movement analysis
-4. `Skills/Kim_Decision/references/models.md` - abstract decision models
-5. `Skills/Kim_Decision/references/gates.md` - stage passage control
+1. `SKILL.md` — the full operating protocol
+2. `references/method.md` — the frame with examples
+3. `references/path.md` — subject movement analysis
+4. `references/models.md` — abstract decision models
+5. `references/gates.md` — stage passage control
 
 ### Usage paths
 
@@ -214,7 +213,7 @@ Recommended reading order:
 GitHub <a href="https://github.com/KimYx0207">KimYx0207</a> |
 X <a href="https://x.com/KimYx0207">@KimYx0207</a> |
 Website <a href="https://www.aiking.dev/">aiking.dev</a> |
-WeChat Official Account: <strong>Lao Jin Guides You Through AI</strong>
+WeChat Official Account: <strong>老金带你玩AI</strong>
 
 Feishu knowledge base:
 <a href="https://my.feishu.cn/wiki/OhQ8wqntFihcI1kWVDlcNdpznFf">long-term updates</a>
@@ -233,7 +232,7 @@ If KIM Skill has been useful, support the project with a coffee.
 
 ### Method basis
 
-KIM Skill's methodological foundation comes from research on meta-based intent amplification, authored by this project maintainer (KimYx0207):
+KIM Skill's methodological foundation comes from my research on meta-based intent amplification:
 
 - Paper: <https://zenodo.org/records/18957649>
 - DOI: `10.5281/zenodo.18957649`
@@ -250,7 +249,7 @@ This is the core design of KIM. If you only read one section, read this one.
 Intent -> Subject -> Path -> Constraint -> Evidence -> Minimum Test -> Models -> Gates -> Output
 ```
 
-Every KIM output walks through this spine. The question is never "what style should the agent use" - it is "has the agent actually followed the method."
+Every KIM output walks through this spine. The question is never "what style should the agent use" — it is "has the agent actually followed the method."
 
 ### Output modes
 
@@ -283,7 +282,7 @@ Gates exist to stop AI from skipping steps. Reaching a stage means you are there
 
 ### Closed loop
 
-The method does not end at Output. Every result feeds back into the method itself - this is the distillation loop:
+The method does not end at Output. Every result feeds back into the method itself — this is the distillation loop:
 
 ```mermaid
 flowchart LR
@@ -300,7 +299,7 @@ flowchart LR
     style FEEDBACK fill:#fb923c,stroke:#ea580c,color:#000,stroke-width:2px
 ```
 
-Experience -> distill -> method -> output -> feedback -> experience. Every cycle sharpens the protocol.
+Experience → distill → method → output → feedback → experience. Every cycle sharpens the protocol.
 
 ### Core frame fields
 
@@ -308,7 +307,7 @@ Experience -> distill -> method -> output -> feedback -> experience. Every cycle
 |-------|-------------|
 | **Intent** | State what must change. A good intent is an outcome, not a topic. |
 | **Subject** | State who experiences the result. Can be a user, buyer, reader, team, system, or decision maker. |
-| **Path** | Map how the subject moves from current state to target state: Motive -> Interpretation -> Action -> Resistance -> Signal -> State Change -> Continuation |
+| **Path** | Map how the subject moves from current state to target state: Motive → Interpretation → Action → Resistance → Signal → State Change → Continuation |
 | **Constraint** | State the hard limits: time, budget, people, tools, rules, data, risk tolerance. |
 | **Evidence** | Separate into: Confirmed, User-provided, Inference, Unconfirmed. Verify claims that depend on external rules, systems, or market conditions. |
 | **Minimum Test** | Define the smallest test that can change the decision. Must include: Goal, Input, Action, Output, Pass condition, Fail signal, Next step, Do not do. |
@@ -321,10 +320,10 @@ Experience -> distill -> method -> output -> feedback -> experience. Every cycle
 | Rule | Why |
 |------|-----|
 | Keep the operating method abstract | Concrete personas lock the model into one voice; abstract methods transfer across tasks |
-| Use concrete evidence in final answers | Real names, tools, data, and dates improve trust - but only when verified |
+| Use concrete evidence in final answers | Real names, tools, data, and dates improve trust — but only when verified |
 | Label all uncertainty | Unconfirmed claims must be tagged; never present inference as fact |
 | End with a usable result | Every response must be specific enough to execute without further research |
-| Data gap protocol | When key evidence is missing, state what is missing and ask - never guess |
+| Data gap protocol | When key evidence is missing, state what is missing and ask — never guess |
 | Information density | Every sentence must carry new information. Cut sentences that restate the obvious |
 | Concrete delivery | Prefer exact tools, exact actions, exact thresholds. If you cannot be concrete, the result is a list of questions to answer first |
 
@@ -333,63 +332,57 @@ Experience -> distill -> method -> output -> feedback -> experience. Every cycle
 ## Files
 
 ```text
-Kim_Decision/
-|-- README.md
-|-- README.zh-CN.md
-|-- docs/
-|   `-- images/           # Root README contact and payment QR images
-`-- Skills/
-    `-- Kim_Decision/
-        |-- SKILL.md      # Full operating protocol
-        |-- README.md
-        |-- README.zh-CN.md
-        |-- LICENSE-MIT
-        |-- LICENSE-APACHE
-        |-- NOTICE
-        |-- references/
-        |   |-- method.md
-        |   |-- path.md
-        |   |-- models.md
-        |   |-- gates.md
-        |   |-- output.md
-        |   `-- verification.md
-        |-- examples/
-        |   |-- decision.md
-        |   |-- calibration.md
-        |   |-- creation.md
-        |   `-- debugging.md
-        `-- docs/
-            |-- images/
-            |   |-- contact-qr.png
-            |   |-- wechat-pay.jpg
-            |   `-- alipay.jpg
-            `-- zh-CN/
-                |-- SKILL.md
-                |-- references/
-                `-- examples/
+laojin/
+├── SKILL.md              # Full operating protocol
+├── README.md
+├── README.zh-CN.md
+├── LICENSE-MIT
+├── LICENSE-APACHE
+├── NOTICE
+├── references/
+│   ├── method.md         # Core frame with examples
+│   ├── path.md           # Subject movement analysis
+│   ├── models.md         # Abstract decision models
+│   ├── gates.md          # Stage passage control
+│   ├── output.md         # Deliverable standards
+│   └── verification.md   # Completion checklist
+├── examples/
+│   ├── decision.md
+│   ├── calibration.md
+│   ├── creation.md
+│   └── debugging.md
+└── docs/
+    ├── images/
+    │   ├── contact-qr.png
+    │   ├── wechat-pay.jpg
+    │   └── alipay.jpg
+    └── zh-CN/
+        ├── SKILL.md
+        ├── references/
+        └── examples/
 ```
 
 ---
 
 ## Contributing
 
-Found a gap or want to improve a reference? Open an Issue first, then submit a PR. Keep the method abstract - do not add persona-specific content.
+Found a gap or want to improve a reference? Open an Issue first, then submit a PR. Keep the method abstract — do not add persona-specific content.
 
 ---
 
 ## Further Reading
 
 - [README.zh-CN.md](README.zh-CN.md)
-- [Skills/Kim_Decision/SKILL.md](Skills/Kim_Decision/SKILL.md) - the full operating protocol
-- [Skills/Kim_Decision/references/method.md](Skills/Kim_Decision/references/method.md) - the frame with examples
+- [SKILL.md](SKILL.md) — the full operating protocol
+- [references/method.md](references/method.md) — the frame with examples
 
 ---
 
 ## License
 
-KIM Skill is dual licensed under:
+Dual licensed under:
 
 - MIT License
 - Apache License 2.0
 
-Use either license. See `Skills/Kim_Decision/LICENSE-MIT` and `Skills/Kim_Decision/LICENSE-APACHE`.
+Use either license.

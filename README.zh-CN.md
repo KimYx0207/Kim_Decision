@@ -4,15 +4,14 @@
 <p style="font-size: 1.1em; color: #7c3aed; font-weight: 600; margin-top: 0;">判断与交付协议</p>
 
 <p>
-  语言：
-  <a href="README.md">英文</a> |
+  <a href="README.md">English</a> |
   <a href="README.zh-CN.md">简体中文</a>
 </p>
 
 <p>
   <img alt="Runtime" src="https://img.shields.io/badge/runtime-Claude%20Code%20%7C%20Codex%20%7C%20OpenClaw%20%7C%20Cursor-111827"/>
   <img alt="Skill" src="https://img.shields.io/badge/type-Agent%20Skill-7c3aed"/>
-  <img alt="Stars" src="https://img.shields.io/github/stars/KimYx0207/Kim_Decision?style=flat&logo=github"/>
+  <img alt="Stars" src="https://img.shields.io/github/stars/KimYx0207/laojin-skill?style=flat&logo=github"/>
   <img alt="License" src="https://img.shields.io/badge/license-MIT%20OR%20Apache--2.0-green"/>
 </p>
 
@@ -178,23 +177,23 @@ Pass condition:
 **个人级安装**（所有项目可用）：
 
 ```bash
-mkdir -p ~/.claude/skills && cp -R Skills/Kim_Decision ~/.claude/skills/laojin
+mkdir -p ~/.claude/skills && cp -R laojin ~/.claude/skills/laojin
 ```
 
 **项目级安装**（仅限当前仓库）：
 
 ```bash
-mkdir -p .claude/skills && cp -R Skills/Kim_Decision .claude/skills/laojin
+mkdir -p .claude/skills && cp -R laojin .claude/skills/laojin
 ```
 
 建议阅读顺序：
 
-1. `Skills/Kim_Decision/SKILL.md` — 完整操作协议
-2. `Skills/Kim_Decision/docs/zh-CN/SKILL.md` — 中文操作协议
-3. `Skills/Kim_Decision/docs/zh-CN/references/method.md` — 核心框架及示例
-4. `Skills/Kim_Decision/docs/zh-CN/references/path.md` — 主体运动分析
-5. `Skills/Kim_Decision/docs/zh-CN/references/models.md` — 抽象判断模型
-6. `Skills/Kim_Decision/docs/zh-CN/references/gates.md` — 阶段通过控制
+1. `SKILL.md` — 完整操作协议
+2. `docs/zh-CN/SKILL.md` — 中文操作协议
+3. `docs/zh-CN/references/method.md` — 核心框架及示例
+4. `docs/zh-CN/references/path.md` — 主体运动分析
+5. `docs/zh-CN/references/models.md` — 抽象判断模型
+6. `docs/zh-CN/references/gates.md` — 阶段通过控制
 
 ### 使用路径
 
@@ -220,9 +219,9 @@ X <a href="https://x.com/KimYx0207">@KimYx0207</a> |
 飞书知识库：
 <a href="https://my.feishu.cn/wiki/OhQ8wqntFihcI1kWVDlcNdpznFf">长期更新入口</a>
 
-### 请我一杯咖啡
+### 请老金喝杯咖啡
 
-如果 KIM Skill 帮到了你，欢迎请我喝杯咖啡，算是对持续维护的支持。
+如果老金 Skill 对你有帮助，欢迎请我喝杯咖啡，算是对持续维护的支持。
 
 <table align="center">
 <tr><th>微信支付</th><th>支付宝</th></tr>
@@ -234,7 +233,7 @@ X <a href="https://x.com/KimYx0207">@KimYx0207</a> |
 
 ### 方法依据
 
-KIM Skill 的方法论基础来自本项目维护者（KimYx0207）撰写的"基于元的意图放大"研究：
+老金 Skill 的方法论基础来自我（KimYx0207）撰写的"基于元的意图放大"研究：
 
 - 论文：<https://zenodo.org/records/18957649>
 - DOI：`10.5281/zenodo.18957649`
@@ -334,40 +333,34 @@ flowchart LR
 ## 文件结构
 
 ```text
-Kim_Decision/
+laojin/
+├── SKILL.md              # 完整操作协议
 ├── README.md
 ├── README.zh-CN.md
-├── docs/
-│   └── images/           # 根 README 使用的联系方式和付款码
-└── Skills/
-    └── Kim_Decision/
-        ├── SKILL.md      # 完整操作协议
-        ├── README.md
-        ├── README.zh-CN.md
-        ├── LICENSE-MIT
-        ├── LICENSE-APACHE
-        ├── NOTICE
+├── LICENSE-MIT
+├── LICENSE-APACHE
+├── NOTICE
+├── references/
+│   ├── method.md         # 核心框架及示例
+│   ├── path.md           # 主体运动分析
+│   ├── models.md         # 抽象判断模型
+│   ├── gates.md          # 阶段通过控制
+│   ├── output.md         # 交付标准
+│   └── verification.md   # 完成度检查清单
+├── examples/
+│   ├── decision.md
+│   ├── calibration.md
+│   ├── creation.md
+│   └── debugging.md
+└── docs/
+    ├── images/
+    │   ├── contact-qr.png
+    │   ├── wechat-pay.jpg
+    │   └── alipay.jpg
+    └── zh-CN/
+        ├── SKILL.md
         ├── references/
-        │   ├── method.md
-        │   ├── path.md
-        │   ├── models.md
-        │   ├── gates.md
-        │   ├── output.md
-        │   └── verification.md
-        ├── examples/
-        │   ├── decision.md
-        │   ├── calibration.md
-        │   ├── creation.md
-        │   └── debugging.md
-        └── docs/
-            ├── images/
-            │   ├── contact-qr.png
-            │   ├── wechat-pay.jpg
-            │   └── alipay.jpg
-            └── zh-CN/
-                ├── SKILL.md
-                ├── references/
-                └── examples/
+        └── examples/
 ```
 
 ---
@@ -381,16 +374,16 @@ Kim_Decision/
 ## 延伸阅读
 
 - [README.md](README.md)
-- [Skills/Kim_Decision/SKILL.md](Skills/Kim_Decision/SKILL.md) — 完整操作协议
-- [Skills/Kim_Decision/docs/zh-CN/references/method.md](Skills/Kim_Decision/docs/zh-CN/references/method.md) — 核心框架及示例
+- [SKILL.md](SKILL.md) — 完整操作协议
+- [docs/zh-CN/references/method.md](docs/zh-CN/references/method.md) — 核心框架及示例
 
 ---
 
 ## 协议
 
-KIM Skill 采用双协议：
+双协议：
 
 - MIT License
 - Apache License 2.0
 
-任选其一使用。详见 `Skills/Kim_Decision/LICENSE-MIT` 和 `Skills/Kim_Decision/LICENSE-APACHE`。
+任选其一使用。
