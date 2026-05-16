@@ -57,3 +57,12 @@ Check before the final answer.
 - [ ] No placeholders remain.
 - [ ] No background-work promise.
 - [ ] No unnecessary question.
+
+## Business layer (when loaded)
+
+- [ ] Revenue check: six questions answered or gaps flagged.
+- [ ] MVP scope: V1 fits one sentence, exclusions listed.
+- [ ] Boss perspective: at least one quick win identified.
+- [ ] Delivery loop: input through confirmation complete.
+- [ ] No D-tier evidence used as decision basis.
+- [ ] Evidence items tagged with tier (A/B/C/D).

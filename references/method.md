@@ -86,6 +86,17 @@ Use this for conclusions drawn from available facts.
 
 Use this for missing evidence.
 
+### Evidence tiers
+
+Tag each evidence item:
+
+- A: real data, real customers, real revenue, verified outcomes
+- B: public case studies, competitor validation, published benchmarks
+- C: reasonable reasoning from available facts, unverified
+- D: guesswork — do not use as decision basis
+
+If a key decision rests on C or D evidence only, state it as a data gap.
+
 ## Minimum Test
 
 The minimum test must be small enough to run before a larger build.

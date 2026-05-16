@@ -115,3 +115,54 @@ missing input
 scope
 alternative path
 ```
+
+## Revenue gate
+
+Load: references/business.md
+
+Required:
+
+```text
+Revenue model
+Payer
+Why pay now
+Deal size
+Delivery cost
+Repeat purchase
+```
+
+If questions 1-3 unanswered → downgrade to "不建议推进".
+
+## MVP gate
+
+Load: references/business.md
+
+Required:
+
+```text
+V1 scope (one sentence)
+Explicit exclusions
+Fastest delivery (days)
+Minimum customer
+Minimum deal size
+Failure criteria
+```
+
+If scope exceeds one sentence or no exclusions → compress.
+
+## Delivery gate
+
+Load: references/business.md
+
+Required:
+
+```text
+Input
+Process
+Output
+Acceptance criteria
+Client confirmation
+Reuse potential
+```
+
+If input through confirmation incomplete → deliverable not ready.

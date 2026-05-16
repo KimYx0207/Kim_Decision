@@ -8,8 +8,11 @@ description: >
   test, and gates. Trigger when the user asks for a decision analysis, wants
   structured reasoning (“重新想”, “仔细看”), requests a product or business
   review, asks “问问老金” or “老金怎么看”, or needs a concrete plan with
-  pass conditions. Personality and tone are controlled externally — this skill
-  provides the decision method only.
+  pass conditions. Also trigger for business proposals, monetization plans,
+  pricing, client delivery, commercial strategy, revenue modeling, or any
+  decision involving revenue, cost, buyer perspective, or deliverable scope.
+  Personality and tone are controlled externally — this skill provides the
+  decision method only.
 ---
 
 # KIM Skill
@@ -125,6 +128,15 @@ Separate:
 - Inference
 - Unconfirmed
 
+Tier each item:
+
+- A: real data, real customers, real revenue, verified outcomes
+- B: public case studies, competitor validation, published benchmarks
+- C: reasonable reasoning from available facts, not yet verified
+- D: guesswork, no supporting evidence — do not use as decision basis
+
+Label every claim with both source label and tier. Flag D-tier claims explicitly. If a key decision relies on C or D evidence only, state this as a data gap.
+
 Verify claims that depend on time, external rules, external systems, private files, high-stakes judgment, or current market conditions.
 
 ### Minimum Test
@@ -193,6 +205,7 @@ Load one file at a time, only when the task needs it.
 - `references/gates.md`: load for multi-step reasoning, validation, or when the user asks for verification.
 - `references/output.md`: load when writing deliverables, fact-checking, or refining wording.
 - `references/verification.md`: load before finalizing any answer to run the completion checklist.
+- `references/business.md`: load when the task involves a proposal, plan, business decision, monetization, product strategy, pricing, client delivery, or any decision with a commercial dimension.
 - `examples/`: load one relevant example (decision, creation, debugging, or calibration) when unsure about output structure.
 
 ## Default output
@@ -248,6 +261,46 @@ Follow this structure. Omit any section that would only restate what is already 
 
 [Only include models that produce a non-obvious finding. Skip models that only confirm what is already stated.]
 
+## Business check
+
+[Include when business layer is loaded. See references/business.md.]
+
+### Revenue check
+
+- Revenue model:
+- Payer:
+- Why pay now:
+- Deal size:
+- Delivery cost:
+- Repeat purchase:
+- Verdict: proceed / 需验证 / 不建议推进
+
+### MVP scope
+
+- V1 scope (one sentence):
+- Explicit exclusions:
+- Fastest delivery (days):
+- Minimum customer:
+- Minimum deal size:
+- Failure criteria:
+
+### Boss perspective
+
+- Why buy:
+- Employee adoption:
+- Implementation effort:
+- Quick win (first week):
+- Cost of not buying:
+
+### Delivery loop
+
+- Input:
+- Process:
+- Output:
+- Acceptance criteria:
+- Client confirmation method:
+- Reuse potential:
+
 ## Usable result
 
 [Specific executable steps: exact tools, exact actions, exact thresholds. See "Concrete delivery" section above.]
@@ -280,12 +333,20 @@ The final answer must include:
 - intent
 - subject
 - path (only steps that carry new information)
-- evidence labels when needed
+- evidence labels and tiers when needed
 - data gaps with explicit questions when key evidence is missing
 - minimum test or next action
 - what not to do when scope can expand
 - acceptance criteria
 - model check (only models with non-obvious findings)
 - usable result (specific enough to execute without further research)
+
+When business layer is loaded, also include:
+
+- revenue check (six questions answered or gaps flagged)
+- MVP scope (V1 fits one sentence, exclusions listed, delivery under 14 days)
+- boss perspective (at least one quick win identified)
+- delivery loop (input through confirmation complete)
+- no D-tier evidence used as decision basis
 
 Before finalizing, cut any sentence that restates context, repeats a previous point, or fills a slot without adding insight.
