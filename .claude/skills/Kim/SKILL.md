@@ -6,10 +6,10 @@ description: >
   experience, user path, growth, monetization, strategy, retrospectives, and
   any task needing structured reasoning with intent, path, evidence, minimum
   test, and gates. Trigger when the user asks for a decision analysis, wants
-  structured reasoning (“重新想”, “仔细看”), requests a product or business
-  review, asks “问问老金” or “老金怎么看”, or needs a concrete plan with
-  pass conditions. Also trigger for business proposals, monetization plans,
-  pricing, client delivery, commercial strategy, revenue modeling, or any
+  structured reasoning ("重新想", "仔细看", "分析一下", "这个能不能做"), requests
+  a product or business review, asks for an opinion on a plan or idea, or
+  needs a concrete plan with pass conditions. Also trigger for business
+  proposals, monetization, pricing, client delivery, revenue modeling, or any
   decision involving revenue, cost, buyer perspective, or deliverable scope.
   Personality and tone are controlled externally — this skill provides the
   decision method only.
@@ -177,9 +177,9 @@ Common models:
 
 ### Gates
 
-Use gates to stop skipped steps.
+Use gates to stop skipped steps. A stage reached is not a stage passed.
 
-A stage reached is not a stage passed.
+Load `references/gates.md` for the full gate set (11 gates): Path, Evidence, Minimum-test, No-placeholder, Root-cause, Completion, Three-failure, Research, Revenue, MVP, Delivery.
 
 ### Output
 
@@ -201,14 +201,17 @@ Examples:
 
 Load one file at a time, only when the task needs it.
 
-- `references/method.md`: load when the task is complex and you need the full frame with examples.
-- `references/path.md`: load when analyzing user movement, conversion, or workflow steps.
-- `references/models.md`: load when the task needs abstract decision analysis beyond the default three models.
-- `references/gates.md`: load for multi-step reasoning, validation, or when the user asks for verification.
-- `references/output.md`: load when writing deliverables, fact-checking, or refining wording.
-- `references/verification.md`: load before finalizing any answer to run the completion checklist.
-- `references/business.md`: load when the task involves a proposal, plan, business decision, monetization, product strategy, pricing, client delivery, or any decision with a commercial dimension.
-- `examples/`: load one relevant example (decision, creation, debugging, or calibration) when unsure about output structure.
+- `references/method.md`: load when Intent or Path fields need expansion with examples beyond what SKILL.md provides, or when the user's task is complex enough to require the full frame walkthrough.
+- `references/path.md`: load when analyzing user movement, conversion funnels, workflow steps, or any scenario where the subject transitions between states.
+- `references/models.md`: load when the task needs more than three abstract models, or when the default set (Risk, Feedback, Constraint) does not cover the decision dimension.
+- `references/gates.md`: load for multi-step reasoning, validation workflows, when the user asks for verification, or when business layer gates (Revenue, MVP, Delivery) are needed.
+- `references/output.md`: load when writing the final deliverable, fact-checking claims, or refining wording and communication style.
+- `references/verification.md`: load before finalizing any answer — contains the completion checklist.
+- `references/business.md`: load when the task mentions pricing, monetization, revenue, cost, client delivery, MVP scope, or any decision with a commercial dimension. Trigger keywords: 变现, 定价, 商业, 收入, 成本, 客户, 交付, revenue, monetize, price, client, deliver, scope.
+- `examples/decision.md`: load when the task is choosing between options or making a single decision.
+- `examples/creation.md`: load when the task involves designing or building something new.
+- `examples/debugging.md`: load when the task involves diagnosing a failure or finding a root cause.
+- `examples/calibration.md`: load when reviewing or adjusting an existing plan, output, or decision.
 
 ## Default output
 
@@ -265,54 +268,25 @@ When the business layer is loaded, present the output as a business conversation
 
 [Only include models that produce a non-obvious finding. Skip models that only confirm what is already stated.]
 
-## Business check
-
-[Include when business layer is loaded. See references/business.md.]
-
-### Revenue check
-
-- Revenue model:
-- Payer:
-- Why pay now:
-- Deal size:
-- Delivery cost:
-- Repeat purchase:
-- Verdict: proceed / needs verification / do not proceed
-
-### MVP scope
-
-- V1 scope (one sentence):
-- Explicit exclusions:
-- Fastest delivery (days):
-- Minimum customer:
-- Minimum deal size:
-- Failure criteria:
-
-### Boss perspective
-
-- Why buy:
-- Employee adoption:
-- Implementation effort:
-- Quick win (first week):
-- Cost of not buying:
-
-### Delivery loop
-
-- Input:
-- Process:
-- Output:
-- Acceptance criteria:
-- Client confirmation method:
-- Reuse potential:
-
 ## Usable result
 
-[Specific executable steps: exact tools, exact actions, exact thresholds. See "Concrete delivery" section above.]
+[Specific executable steps: exact tools, exact actions, exact thresholds.]
 ```
+
+### Business check (when business layer is loaded)
+
+When `references/business.md` is loaded, include the business check sections between "Model check" and "Usable result". Use the templates and rules defined in that file:
+
+- Revenue check (six questions, verdict)
+- MVP scope (one sentence, exclusions, delivery time)
+- Boss perspective (why buy, quick win)
+- Delivery loop (input through confirmation)
 
 ## Short output
 
-Use short output when: the user asks a single focused question, requests a quick answer ("简单说", "short answer"), or the task scope is narrow (one decision, one path fix, one next action).
+Use short output when the task meets ALL of these: single focused question, narrow scope (one decision or one path fix), no commercial dimension.
+
+Short output exempts: Model check, Business check, full Evidence breakdown, Data gaps. Still required: decision, main path break, next action, pass condition.
 
 ```markdown
 Decision:
@@ -331,27 +305,22 @@ Pass condition:
 
 ## Final pass criteria
 
-The final answer must include:
+Before finalizing, verify the answer includes these. Cut any sentence that restates context, repeats a previous point, or fills a slot without adding insight.
 
-- decision
-- intent
-- subject
-- path (only steps that carry new information)
-- evidence labels and tiers when needed
+Core (always required):
+
+- decision, intent, subject, path (only steps with new information)
+- evidence labels and tiers when claims appear
 - research attempt on critical C/D tier evidence
-- data gaps with explicit questions when key evidence is missing
 - minimum test or next action
-- what not to do when scope can expand
+- what not to do (when scope can expand)
 - acceptance criteria
-- model check (only models with non-obvious findings)
-- usable result (specific enough to execute without further research)
+- usable result (specific enough to execute without research)
 
-When business layer is loaded, also include:
+Business layer (when loaded):
 
 - revenue check (six questions answered or gaps flagged)
 - MVP scope (V1 fits one sentence, exclusions listed, delivery under 14 days)
 - boss perspective (at least one quick win identified)
 - delivery loop (input through confirmation complete)
 - no D-tier evidence used as decision basis
-
-Before finalizing, cut any sentence that restates context, repeats a previous point, or fills a slot without adding insight.

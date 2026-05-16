@@ -94,6 +94,9 @@ flowchart LR
 ```
 Decision:  等。先把新用户引导流程的流失问题修了再说。
 
+Main path break:
+用户还没体验到足够价值就碰到了付费墙——流失发生在价值缺口处，不是产品本身。
+
 Do now:
 1. 把引导流程修复发上去（已经做了 80%，最多 2 天）
 2. 找 5 个内测用户跑一遍看看
@@ -177,23 +180,22 @@ Pass condition:
 **个人级安装**（所有项目可用）：
 
 ```bash
-mkdir -p ~/.claude/skills && cp -R laojin ~/.claude/skills/laojin
+mkdir -p ~/.claude/skills && cp -R Kim ~/.claude/skills/Kim
 ```
 
 **项目级安装**（仅限当前仓库）：
 
 ```bash
-mkdir -p .claude/skills && cp -R laojin .claude/skills/laojin
+mkdir -p .claude/skills && cp -R Kim .claude/skills/Kim
 ```
 
 建议阅读顺序：
 
-1. `SKILL.md` — 完整操作协议
-2. `docs/zh-CN/SKILL.md` — 中文操作协议
-3. `docs/zh-CN/references/method.md` — 核心框架及示例
-4. `docs/zh-CN/references/path.md` — 主体运动分析
-5. `docs/zh-CN/references/models.md` — 抽象判断模型
-6. `docs/zh-CN/references/gates.md` — 阶段通过控制
+1. `.claude/skills/Kim/SKILL.md` — 完整操作协议
+2. `.claude/skills/Kim/references/method.md` — 核心框架及示例
+3. `.claude/skills/Kim/references/path.md` — 主体运动分析
+4. `.claude/skills/Kim/references/models.md` — 抽象判断模型
+5. `.claude/skills/Kim/references/gates.md` — 阶段通过控制
 
 ### 使用路径
 
@@ -257,7 +259,7 @@ X <a href="https://x.com/KimYx0207">@KimYx0207</a> |
 | 模式 | 触发条件 | 结构 |
 |------|---------|------|
 | **完整输出** | 复杂任务、多步决策 | Breakdown、Decision、Path、Evidence、Minimum test、Model check、Usable result |
-| **简短输出** | 单一聚焦问题、要求快速回答、任务范围窄 | Decision、Do now (1-2-3)、Do not do、Pass condition |
+| **简短输出** | 单一聚焦问题、范围窄、无商业维度 | Decision、Main path break、Do now (1-2-3)、Do not do、Pass condition |
 
 ### 硬门
 
@@ -333,34 +335,21 @@ flowchart LR
 ## 文件结构
 
 ```text
-laojin/
+.claude/skills/Kim/
 ├── SKILL.md              # 完整操作协议
-├── README.md
-├── README.zh-CN.md
-├── LICENSE-MIT
-├── LICENSE-APACHE
-├── NOTICE
 ├── references/
 │   ├── method.md         # 核心框架及示例
 │   ├── path.md           # 主体运动分析
 │   ├── models.md         # 抽象判断模型
-│   ├── gates.md          # 阶段通过控制
+│   ├── gates.md          # 阶段通过控制（11个门）
+│   ├── business.md       # 商业决策层
 │   ├── output.md         # 交付标准
 │   └── verification.md   # 完成度检查清单
-├── examples/
-│   ├── decision.md
-│   ├── calibration.md
-│   ├── creation.md
-│   └── debugging.md
-└── docs/
-    ├── images/
-    │   ├── contact-qr.png
-    │   ├── wechat-pay.jpg
-    │   └── alipay.jpg
-    └── zh-CN/
-        ├── SKILL.md
-        ├── references/
-        └── examples/
+└── examples/
+    ├── decision.md
+    ├── calibration.md
+    ├── creation.md
+    └── debugging.md
 ```
 
 ---
@@ -374,8 +363,8 @@ laojin/
 ## 延伸阅读
 
 - [README.md](README.md)
-- [SKILL.md](SKILL.md) — 完整操作协议
-- [docs/zh-CN/references/method.md](docs/zh-CN/references/method.md) — 核心框架及示例
+- [SKILL.md](.claude/skills/Kim/SKILL.md) — 完整操作协议
+- [references/method.md](.claude/skills/Kim/references/method.md) — 核心框架及示例
 
 ---
 

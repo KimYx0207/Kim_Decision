@@ -94,6 +94,9 @@ This is not a new concept. Mature decision teams already do this. KIM turns it i
 ```
 Decision:  Wait. Ship the fix for onboarding drop-off first.
 
+Main path break:
+Users hit the paywall before experiencing enough value — the drop-off is at the value gap, not the product.
+
 Do now:
 1. Ship the onboarding fix (already 80% done, 2 days max)
 2. Run it past 5 beta users for sanity check
@@ -177,22 +180,22 @@ Every answer must be specific enough to act on immediately. If it is not, the an
 **Personal install** (available in every project):
 
 ```bash
-mkdir -p ~/.claude/skills && cp -R laojin ~/.claude/skills/laojin
+mkdir -p ~/.claude/skills && cp -R Kim ~/.claude/skills/Kim
 ```
 
 **Project install** (scoped to one repo):
 
 ```bash
-mkdir -p .claude/skills && cp -R laojin .claude/skills/laojin
+mkdir -p .claude/skills && cp -R Kim .claude/skills/Kim
 ```
 
 Recommended reading order:
 
-1. `SKILL.md` — the full operating protocol
-2. `references/method.md` — the frame with examples
-3. `references/path.md` — subject movement analysis
-4. `references/models.md` — abstract decision models
-5. `references/gates.md` — stage passage control
+1. `.claude/skills/Kim/SKILL.md` — the full operating protocol
+2. `.claude/skills/Kim/references/method.md` — the frame with examples
+3. `.claude/skills/Kim/references/path.md` — subject movement analysis
+4. `.claude/skills/Kim/references/models.md` — abstract decision models
+5. `.claude/skills/Kim/references/gates.md` — stage passage control
 
 ### Usage paths
 
@@ -256,7 +259,7 @@ Every KIM output walks through this spine. The question is never "what style sho
 | Mode | When | Structure |
 |------|------|-----------|
 | **Default output** | Complex task, multi-step decision | Breakdown, Decision, Path, Evidence, Minimum test, Model check, Usable result |
-| **Short output** | Single focused question, quick answer request, narrow scope | Decision, Do now (1-2-3), Do not do, Pass condition |
+| **Short output** | Single focused question, narrow scope, no commercial dimension | Decision, Main path break, Do now (1-2-3), Do not do, Pass condition |
 
 ### Gates
 
@@ -332,34 +335,21 @@ Experience → distill → method → output → feedback → experience. Every 
 ## Files
 
 ```text
-laojin/
+.claude/skills/Kim/
 ├── SKILL.md              # Full operating protocol
-├── README.md
-├── README.zh-CN.md
-├── LICENSE-MIT
-├── LICENSE-APACHE
-├── NOTICE
 ├── references/
 │   ├── method.md         # Core frame with examples
 │   ├── path.md           # Subject movement analysis
 │   ├── models.md         # Abstract decision models
-│   ├── gates.md          # Stage passage control
+│   ├── gates.md          # Stage passage control (11 gates)
+│   ├── business.md       # Business decision layer
 │   ├── output.md         # Deliverable standards
 │   └── verification.md   # Completion checklist
-├── examples/
-│   ├── decision.md
-│   ├── calibration.md
-│   ├── creation.md
-│   └── debugging.md
-└── docs/
-    ├── images/
-    │   ├── contact-qr.png
-    │   ├── wechat-pay.jpg
-    │   └── alipay.jpg
-    └── zh-CN/
-        ├── SKILL.md
-        ├── references/
-        └── examples/
+└── examples/
+    ├── decision.md
+    ├── calibration.md
+    ├── creation.md
+    └── debugging.md
 ```
 
 ---
@@ -373,8 +363,8 @@ Found a gap or want to improve a reference? Open an Issue first, then submit a P
 ## Further Reading
 
 - [README.zh-CN.md](README.zh-CN.md)
-- [SKILL.md](SKILL.md) — the full operating protocol
-- [references/method.md](references/method.md) — the frame with examples
+- [SKILL.md](.claude/skills/Kim/SKILL.md) — the full operating protocol
+- [references/method.md](.claude/skills/Kim/references/method.md) — the frame with examples
 
 ---
 
