@@ -165,6 +165,40 @@ The paywall hits too early. Users haven't experienced enough value to pay.
 - Friction: Paywall placed too early = premature friction = rejection, not conversion
 - Incentive: Users need 7+ days to build habit before paywall feels like fair value exchange
 
+## Business check
+
+### Revenue check
+- Revenue model: SaaS monthly subscription
+- Payer: Free-tier users who hit the paywall
+- Why pay now: Users have built workflow dependency after 10 exports — paywall feels like fair value exchange
+- Deal size: Monthly subscription fee (exact tier TBD)
+- Delivery cost: Near-zero marginal cost per user (SaaS)
+- Repeat purchase: Monthly subscription = natural repeat
+- Verdict: proceed — model is sound, bottleneck is paywall timing
+
+### MVP scope
+- V1 scope (one sentence): Toggle paywall trigger from 3 to 10 exports and measure conversion impact
+- Explicit exclusions: pricing page redesign, tier restructuring, new feature development
+- Fastest delivery: 2 days (LaunchDarkly toggle + GA cohort setup)
+- Minimum customer: 200 users in test cohort
+- Minimum deal size: 6 paid conversions (=3% of 200)
+- Failure criteria: CTR unchanged AND total export usage drops >15%
+
+### Boss perspective
+- Why buy: 0.94% conversion is below industry benchmark; fixing paywall timing is the cheapest lever
+- Employee adoption: PM self-serve in LaunchDarkly — no engineering ticket needed
+- Implementation effort: One toggle change + cohort selection = 2 hours
+- Quick win (first week): Paywall CTR movement in GA within 48 hours
+- Cost of not buying: Continue bleeding 99% of users at the paywall with no data to guide improvement
+
+### Delivery loop
+- Input: 200 users selected via GA event filter ("export_click" count ≥ 2)
+- Process: Toggle PAYWALL_TRIGGER 3→10 in LaunchDarkly → run 2-week A/B test
+- Output: CTR + conversion rate comparison (GA + Stripe Dashboard)
+- Acceptance criteria: CTR ≥12%, test cohort conversion ≥3%
+- Client confirmation: Stripe Dashboard shows conversion rate change; Zhang Wei's segmented report validates
+- Reuse potential: A/B test framework reusable for future paywall experiments
+
 ## Usable result
 1. Toggle PAYWALL_TRIGGER from 3 → 10 in LaunchDarkly (PM self-serve, no ticket)
 2. Select 200-user cohort: Google Analytics → Events → "export_click" where count ≥ 2
@@ -258,7 +292,7 @@ Every KIM output walks through this spine. The question is never "what style sho
 
 | Mode | When | Structure |
 |------|------|-----------|
-| **Default output** | Complex task, multi-step decision | Breakdown, Decision, Path, Evidence, Minimum test, Model check, Usable result |
+| **Default output** | Complex task, multi-step decision | Breakdown, Decision, Path, Evidence, Data gaps, Minimum test, Gates, Model check, Business check (when commercial), Usable result |
 | **Short output** | Single focused question, narrow scope, no commercial dimension | Decision, Main path break, Do now (1-2-3), Do not do, Pass condition |
 
 ### Gates

@@ -165,6 +165,40 @@ Pass condition:
 - Friction: 付费墙是过早放置的摩擦力 = 拒绝，而非转化
 - Incentive: 用户需要7天以上养成习惯，才会觉得付费墙是公平的价值交换
 
+## Business check
+
+### 收入检查
+- Revenue model: SaaS 月费订阅
+- Payer: 触达付费墙的免费用户
+- Why pay now: 用户在10次导出后已建立工作流依赖——付费墙感觉是公平的价值交换
+- Deal size: 月度订阅费（具体档位待定）
+- Delivery cost: 边际成本趋近于零（SaaS）
+- Repeat purchase: 月度订阅 = 自然复购
+- Verdict: proceed — 模式成立，瓶颈在付费墙时机
+
+### MVP 范围
+- V1 scope (one sentence): 把付费墙触发点从3次导出切到10次，测量转化影响
+- Explicit exclusions: 定价页重设计、层级重构、新功能开发
+- Fastest delivery: 2天（LaunchDarkly 开关 + GA 队列设置）
+- Minimum customer: 200人测试队列
+- Minimum deal size: 6个付费转化（= 200人的3%）
+- Failure criteria: CTR 不变 且 总导出使用量下降 >15%
+
+### 老板视角
+- Why buy: 0.94% 转化率低于行业基准；调付费墙时机是最便宜的杠杆
+- Employee adoption: PM 在 LaunchDarkly 自助操作——无需提工单
+- Implementation effort: 一个开关切换 + 队列选择 = 2小时
+- Quick win (first week): 48小时内 GA 里能看到付费墙 CTR 变化
+- Cost of not buying: 继续在付费墙流失99%的用户，且没有数据指导改进
+
+### 交付闭环
+- Input: 通过 GA 事件筛选的200名用户（"export_click" 次数 ≥ 2）
+- Process: LaunchDarkly 切换 PAYWALL_TRIGGER 3→10 → 跑2周 A/B 测试
+- Output: CTR + 转化率对比（GA + Stripe Dashboard）
+- Acceptance criteria: CTR ≥12%，测试队列转化率 ≥3%
+- Client confirmation: Stripe Dashboard 显示转化率变化；张伟的分段报告验证
+- Reuse potential: A/B 测试框架可复用于后续付费墙实验
+
 ## Usable result
 1. 在 LaunchDarkly 把 PAYWALL_TRIGGER 从3切到10（PM自助操作，无需提工单）
 2. 通过 Google Analytics → 事件 → "export_click" 筛选次数 ≥ 2 的用户，选出200人队列
@@ -258,7 +292,7 @@ X <a href="https://x.com/KimYx0207">@KimYx0207</a> |
 
 | 模式 | 触发条件 | 结构 |
 |------|---------|------|
-| **完整输出** | 复杂任务、多步决策 | Breakdown、Decision、Path、Evidence、Minimum test、Model check、Usable result |
+| **完整输出** | 复杂任务、多步决策 | Breakdown、Decision、Path、Evidence、Data gaps、Minimum test、Gates、Model check、Business check（商业决策时）、Usable result |
 | **简短输出** | 单一聚焦问题、范围窄、无商业维度 | Decision、Main path break、Do now (1-2-3)、Do not do、Pass condition |
 
 ### 硬门

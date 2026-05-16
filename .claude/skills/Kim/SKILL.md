@@ -264,6 +264,10 @@ When the business layer is loaded, present the output as a business conversation
 - Next step:
 - Do not do:
 
+## Gates
+
+[State which gates passed, held, or failed. See references/gates.md for the full set.]
+
 ## Model check
 
 [Only include models that produce a non-obvious finding. Skip models that only confirm what is already stated.]
