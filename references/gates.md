@@ -125,7 +125,7 @@ Steps:
 1. Identify which C/D evidence would change the decision if upgraded
 2. Use available tools to search: web search, file read, API query, documentation lookup
 3. If found → upgrade tier (C→B or D→C), cite source
-4. If not found → mark as "未验证" and state: "无法验证，需用户确认"
+4. If not found → mark as "unverified" and state: "unverifiable, user confirmation required"
 
 Rules:
 
@@ -148,7 +148,7 @@ Delivery cost
 Repeat purchase
 ```
 
-If questions 1-3 unanswered → downgrade to "不建议推进".
+If questions 1-3 unanswered → downgrade to "do not proceed".
 
 ## MVP gate
 

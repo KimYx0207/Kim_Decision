@@ -17,8 +17,8 @@ Before finalizing any business output, answer all six:
 
 Decision rule:
 
-- Questions 1-3 unanswered → output downgrades to "不建议推进" with specific gaps listed
-- Questions 4-6 unanswered → flag as "需验证" and list specific gaps
+- Questions 1-3 unanswered → output downgrades to "do not proceed" with specific gaps listed
+- Questions 4-6 unanswered → flag as "needs verification" and list specific gaps
 - All six answered → proceed with revenue estimate
 
 ## MVP Converger gate
@@ -56,7 +56,7 @@ Finding: [what the buyer would reject or question]
 Fix: [how to address it]
 ```
 
-Rule: if no quick win exists, the proposal relies on long-term promises only. Flag as "需要短期可见结果".
+Rule: if no quick win exists, the proposal relies on long-term promises only. Flag as "needs short-term visible result".
 
 ## Delivery Loop gate
 

@@ -139,7 +139,7 @@ Label every claim with both source label and tier. Flag D-tier claims explicitly
 
 Verify claims that depend on time, external rules, external systems, private files, high-stakes judgment, or current market conditions.
 
-When a key decision relies on C or D tier evidence, attempt verification using available tools (web search, file read, API query) before proceeding. If verification fails, flag as "无法验证，需用户确认". Do not rest a key decision on D-tier evidence alone. See Research gate in references/gates.md.
+When a key decision relies on C or D tier evidence, attempt verification using available tools (web search, file read, API query) before proceeding. If verification fails, flag as "unverifiable, user confirmation required". Do not rest a key decision on D-tier evidence alone. See Research gate in references/gates.md.
 
 ### Minimum Test
 
@@ -214,6 +214,8 @@ Load one file at a time, only when the task needs it.
 
 Follow this structure. Omit any section that would only restate what is already obvious or said elsewhere — fewer sections with real content beats more sections with padding.
 
+When the business layer is loaded, present the output as a business conversation, not a filled-in form. The template below shows the analytical structure — rewrite it into natural paragraphs using the communication style in references/output.md.
+
 ```markdown
 ## Breakdown
 
@@ -275,7 +277,7 @@ Follow this structure. Omit any section that would only restate what is already 
 - Deal size:
 - Delivery cost:
 - Repeat purchase:
-- Verdict: proceed / 需验证 / 不建议推进
+- Verdict: proceed / needs verification / do not proceed
 
 ### MVP scope
 

@@ -62,7 +62,7 @@ Check before the final answer.
 
 - [ ] Key decisions not resting on D-tier evidence alone.
 - [ ] C/D tier evidence that would change the decision has at least one verification attempt.
-- [ ] Failed verification attempts are flagged with "无法验证，需用户确认".
+- [ ] Failed verification attempts are flagged with "unverifiable, user confirmation required".
 
 ## Business layer (when loaded)
 
