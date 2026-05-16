@@ -58,6 +58,12 @@ Check before the final answer.
 - [ ] No background-work promise.
 - [ ] No unnecessary question.
 
+## Research
+
+- [ ] Key decisions not resting on D-tier evidence alone.
+- [ ] C/D tier evidence that would change the decision has at least one verification attempt.
+- [ ] Failed verification attempts are flagged with "无法验证，需用户确认".
+
 ## Business layer (when loaded)
 
 - [ ] Revenue check: six questions answered or gaps flagged.

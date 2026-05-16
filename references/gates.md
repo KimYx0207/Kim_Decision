@@ -116,6 +116,23 @@ scope
 alternative path
 ```
 
+## Research gate
+
+When a key decision relies on C or D tier evidence, attempt verification before proceeding.
+
+Steps:
+
+1. Identify which C/D evidence would change the decision if upgraded
+2. Use available tools to search: web search, file read, API query, documentation lookup
+3. If found → upgrade tier (C→B or D→C), cite source
+4. If not found → mark as "未验证" and state: "无法验证，需用户确认"
+
+Rules:
+
+- Do not proceed with a key decision resting on D-tier evidence alone
+- At least one attempt to verify each critical C/D claim
+- If no search tools are available, skip the search and flag the gap explicitly
+
 ## Revenue gate
 
 Load: references/business.md

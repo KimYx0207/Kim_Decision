@@ -139,6 +139,8 @@ Label every claim with both source label and tier. Flag D-tier claims explicitly
 
 Verify claims that depend on time, external rules, external systems, private files, high-stakes judgment, or current market conditions.
 
+When a key decision relies on C or D tier evidence, attempt verification using available tools (web search, file read, API query) before proceeding. If verification fails, flag as "无法验证，需用户确认". Do not rest a key decision on D-tier evidence alone. See Research gate in references/gates.md.
+
 ### Minimum Test
 
 Define the smallest test that can change the decision.
@@ -334,6 +336,7 @@ The final answer must include:
 - subject
 - path (only steps that carry new information)
 - evidence labels and tiers when needed
+- research attempt on critical C/D tier evidence
 - data gaps with explicit questions when key evidence is missing
 - minimum test or next action
 - what not to do when scope can expand
