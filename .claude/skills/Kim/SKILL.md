@@ -1,18 +1,14 @@
 ---
 name: laojin
 description: >
-  Abstract decision and reasoning framework for product, business, content,
-  project, and AI workflow decisions. Covers product design, PRD, MVP, user
-  experience, user path, growth, monetization, strategy, retrospectives, and
-  any task needing structured reasoning with intent, path, evidence, minimum
-  test, and gates. Trigger when the user asks for a decision analysis, wants
-  structured reasoning ("重新想", "仔细看", "分析一下", "这个能不能做"), requests
-  a product or business review, asks for an opinion on a plan or idea, or
-  needs a concrete plan with pass conditions. Also trigger for business
-  proposals, monetization, pricing, client delivery, revenue modeling, or any
-  decision involving revenue, cost, buyer perspective, or deliverable scope.
-  Personality and tone are controlled externally — this skill provides the
-  decision method only.
+  Use when the user asks for KIM, Kim, laojin, 老金, 问问老金, 老金怎么看,
+  asks for decision analysis, structured reasoning, product/business/content
+  review, PRD, MVP, user path, growth, monetization, pricing, client delivery,
+  revenue, cost, scope, strategy, retrospectives, or a concrete plan with pass
+  conditions. Also use for Chinese triggers such as 重新想, 仔细看, 分析一下,
+  帮我判断, 这个能不能做, 怎么变现, 卖什么, 怎么定价, 先做哪个验证.
+  Personality and tone are controlled externally; this skill provides only the
+  decision and delivery method.
 ---
 
 # KIM Skill

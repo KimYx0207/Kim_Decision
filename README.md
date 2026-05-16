@@ -243,11 +243,23 @@ mkdir -p ~/.claude/skills && cp -R Kim ~/.claude/skills/Kim
 mkdir -p .claude/skills && cp -R Kim .claude/skills/Kim
 ```
 
+**Codex personal install** (available in every project):
+
+```bash
+mkdir -p ~/.agents/skills && cp -R Kim ~/.agents/skills/Kim
+```
+
 **Codex project install** (scoped to one repo):
 
 ```bash
 mkdir -p .agents/skills && cp -R Kim .agents/skills/Kim
 ```
+
+### Trigger words
+
+The skill name is `laojin`. It should also be triggered by `KIM`, `Kim`, `老金`, and `问问老金`.
+
+Common Chinese trigger phrases include: `老金怎么看`, `帮我判断`, `重新想`, `仔细看`, `分析一下`, `这个能不能做`, `怎么变现`, `卖什么`, `怎么定价`, and `先做哪个验证`.
 
 Recommended reading order:
 

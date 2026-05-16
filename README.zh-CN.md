@@ -243,11 +243,23 @@ mkdir -p ~/.claude/skills && cp -R Kim ~/.claude/skills/Kim
 mkdir -p .claude/skills && cp -R Kim .claude/skills/Kim
 ```
 
+**Codex 个人级安装**（所有项目可用）：
+
+```bash
+mkdir -p ~/.agents/skills && cp -R Kim ~/.agents/skills/Kim
+```
+
 **Codex 项目级安装**（仅限当前仓库）：
 
 ```bash
 mkdir -p .agents/skills && cp -R Kim .agents/skills/Kim
 ```
+
+### 触发词
+
+Skill 名称是 `laojin`。也应该通过 `KIM`、`Kim`、`老金`、`问问老金` 触发。
+
+常见中文触发句包括：`老金怎么看`、`帮我判断`、`重新想`、`仔细看`、`分析一下`、`这个能不能做`、`怎么变现`、`卖什么`、`怎么定价`、`先做哪个验证`。
 
 建议阅读顺序：
 
