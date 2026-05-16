@@ -19,13 +19,13 @@
 
 ## Overview
 
-**KIM Skill** is what happens when I distill my own lifetime of hard-won decisions into a protocol.
+**KIM Skill** is a decision protocol for turning fuzzy questions into usable next actions.
 
-I have been breaking things, fixing things, and making judgment calls under pressure for years — mostly while cursing at code and questioning life choices. This skill is my **distillation**: everything that actually worked, stripped of the profanity (mostly), compressed into a structured method that AI agents can follow.
+It is built for the moments where a normal prompt usually produces confident but vague advice: should I launch, sell, price, cut scope, change direction, or run a test first? KIM forces the agent to state the intent, map the path, label the evidence, define the smallest useful test, and end with something you can execute.
 
 Most AI skills tell the model *what style to use*. KIM asks a different question: **does the agent actually have a method for reaching a usable result — or is it just improvising with confidence?**
 
-> Think of it as extracting the "judgment yeast" from years of fermented experience, then bottling it so any AI can pour a shot.
+> The point is simple: less inspirational advice, more decisions that can be tested.
 
 Without a method, the model improvises. With KIM, every output follows one spine:
 
@@ -87,149 +87,175 @@ This is not a new concept. Mature decision teams already do this. KIM turns it i
 
 **You ask:**
 
-> Should I launch my product now or wait another month?
+> I want to use AI to make extra money this month. Should I sell AI poster packages to local restaurants?
 
-**KIM outputs (short format):**
+**KIM outputs (business format):**
 
 ```
-Decision:  Wait. Ship the fix for onboarding drop-off first.
+## Breakdown
+- Intent: Make first revenue from a small AI service within 30 days
+- Subject: Local restaurant owners who need fresh promotion material but do not have a designer
+- Path: Identify owner -> show sample poster -> offer fixed package -> collect deposit -> deliver first batch -> ask for monthly renewal
+- Constraint: Solo operator, no ad budget, 30-day target, must use tools already available
+- Acceptance: At least 3 paying customers, each paying ¥299 or more, with one customer willing to renew
 
-Main path break:
-Users hit the paywall before experiencing enough value — the drop-off is at the value gap, not the product.
+## Decision
+Proceed, but sell a narrow "weekly restaurant promo poster package", not a generic AI design service.
 
-Do now:
-1. Ship the onboarding fix (already 80% done, 2 days max)
-2. Run it past 5 beta users for sanity check
-3. If ≥ 4/5 say "this is clearer" → launch next week
+## Path
+- Motive: Restaurant owners need visible offers for lunch specials, delivery platforms, WeChat groups, and storefront posters.
+- Interpretation: "AI design" sounds abstract; "4 promo posters for this week's dishes" sounds like a concrete business result.
+- Action: Make 3 sample posters for one real restaurant category, then sell the package in person or through WeChat.
+- Resistance: Owners may distrust AI output and may not want to think through design requirements.
+- Signal: They ask "can you make one for my menu?" or "how much for a month?" instead of asking how the AI works.
+- State change: The owner moves from "interesting tool" to "this can help me sell today's dishes".
+- Continuation: If one weekly batch is accepted, convert it into a monthly package.
 
-Do not do:
-- Launch today and patch onboarding later
-- Add new features before fixing the drop-off
+## Evidence
+- User-provided, tier A: The 30-day income goal and solo-operator constraint come from the question.
+- Confirmed, tier A: A paid order is the only valid proof; likes, compliments, and "looks good" are not revenue.
+- Inference, tier C: Restaurants are better first customers than broad "small businesses" because the offer can be tied to visible daily sales.
+- Unconfirmed, tier D: Local owners' willingness to pay ¥299+ is unknown until tested.
 
-Pass condition:
-Onboarding completion rate ≥ 60% in test cohort (current: 34%)
+## Data gaps
+- Local willingness to pay is unknown. If owners reject ¥299, test ¥99 one-off posters before abandoning the channel.
+- Delivery time is unknown. If one package takes more than 90 minutes, the service will not scale as a side income.
+
+## Minimum test
+- Goal: Validate that local owners will pay for a narrow AI-assisted poster package
+- Input: 10 nearby restaurants or food stalls with visible promotions
+- Action: Create 3 sample posters for one category, then pitch a ¥299 package: 4 posters delivered within 24 hours
+- Output: Deposits collected, delivery time per package, owner feedback
+- Pass condition: 3 paid deposits within 7 days and average delivery time <=90 minutes per customer
+- Fail signal: Fewer than 2 deposits after 10 direct pitches, or every buyer asks for heavy custom edits
+- Next step: If pass, sell a ¥799/month renewal package with 4 weekly batches
+- Do not do: Build a website, run ads, make 20 service packages, or sell "AI consulting" before the first paid order
+
+## Gates
+- Evidence gate: HOLD — willingness to pay is unconfirmed until direct pitches happen.
+- Revenue gate: PASS for test — payer, price, urgency, delivery cost, and repeat path are defined.
+- MVP gate: PASS — one package, one customer type, 7-day test.
+- Delivery gate: PASS if the 24-hour delivery promise is met without custom design chaos.
+
+## Model check
+- Friction: A generic service creates too much explanation. A fixed poster package reduces buyer thinking.
+- Incentive: Owners care about more orders, not AI. The pitch must show the dish, price, and promotion channel.
+
+## Business check
+The play makes money only if an owner pays for a result they already understand: better-looking promotion material for dishes they are trying to sell this week. The payer is the owner or store manager. The first deal size is ¥299 because it is small enough for impulse testing but high enough to expose whether the service has value.
+
+V1 does one thing only: 4 promo posters for one restaurant, delivered in 24 hours. Exclude logo design, menu redesign, brand strategy, video, ad buying, and long copywriting. Week one quick win is simple: a store owner receives usable posters and asks for the next batch.
+
+## Usable result
+1. Pick one category today: milk tea, hotpot, lunch set, barbecue, or bakery.
+2. Make 3 sample posters for that category with the same package promise: "4 promo posters, delivered in 24 hours, ¥299."
+3. Pitch 10 nearby owners in person or on WeChat before changing the offer.
+4. Take a deposit before doing custom work.
+5. Continue only if 3 owners pay within 7 days and delivery stays under 90 minutes per customer.
 ```
 
 **You ask:**
 
-> Our SaaS product has 5000 free users but only 47 paid conversions in 6 months. What's wrong?
+> My short-video account gets views but makes no money. What should I sell first?
 
 **KIM outputs (default format):**
 
 ```
 ## Breakdown
-- Intent: Convert free users to paid at ≥3% rate (current: 0.94%)
-- Subject: Free-tier users who hit the 3-export paywall
-- Path: Sign up → hit export limit → see upgrade CTA → convert or churn
-- Constraint: 4 weeks no engineering (CTO confirmed 2026-05-10), 2-person marketing, budget ≤¥5000
-- Acceptance: Paid conversion rate ≥3% within 8 weeks, verified via Stripe Dashboard
+- Intent: Turn existing attention into first revenue
+- Subject: Viewers who already watch the account for practical advice
+- Path: Watch video -> trust the problem diagnosis -> want a shortcut -> buy a small template/service -> get result -> return for a larger offer
+- Constraint: No audience size, niche, price point, or conversion data provided
+- Acceptance: First 10 paid orders from current audience without paid ads
 
 ## Decision
-The paywall hits too early. Users haven't experienced enough value to pay.
+Sell the smallest paid shortcut related to the content that already gets comments, not a course, community, or broad consulting offer.
 
 ## Path
-- Motive: Users sign up to solve an immediate problem, not to buy a subscription
-- Interpretation: Paywall at 3 exports feels like a trap — no dependency built yet
-- Action: Push paywall trigger from 3 exports to 10 (LaunchDarkly toggle, no deploy)
-- Resistance: If core feature isn't sticky, users churn before 10 exports too
-- Signal: Upgrade page visits without conversion = value gap (Google Analytics → Behavior Flow)
-- State change: Users hit paywall after building real workflow, not on first session
-- Continuation: Post-conversion retention correlates with DAU ≥3x/week (Product lead Zhang Wei's cohort analysis, 2026-04)
+- Motive: Viewers want a faster path from "I learned something" to "I can use this today".
+- Interpretation: A low-price template feels safer than a high-price promise.
+- Action: Package the top repeated problem into a ¥19-¥99 downloadable template, checklist, or mini diagnosis.
+- Resistance: Viewers may like the content but not trust the paid result yet.
+- Signal: Comments asking "can you send the template?", "how do I do this?", or "can you look at mine?".
+- State change: The account changes from attention collection to transaction testing.
+- Continuation: Buyers of the small product become candidates for service, membership, or higher-ticket delivery.
 
 ## Evidence
-- Confirmed: 5000 free users, 47 paid conversions, paywall at 3 exports (Stripe Dashboard, 2026-04)
-- User-provided: No engineering for 4 weeks (CTO Li Ming, sprint planning 2026-05-10)
-- Inference: First-session paywall users convert <2%; day-7+ users convert ~8% (Zhang Wei's cohort analysis)
-- Unconfirmed: Competitor paywall thresholds (Notion, Coda, Airtable — all unverified); user session length not segmented by cohort
+- User-provided, tier A: The account has views but no revenue.
+- Confirmed, tier A: Revenue requires a paid offer; views alone are not a monetization model.
+- Inference, tier C: Repeated viewer questions are the best source for the first paid product.
+- Unconfirmed, tier D: Audience size, niche, comment quality, and buyer urgency are unknown.
 
 ## Data gaps
-- Competitor paywall trigger points: if competitors use 5 exports, our 10 overshoots; if 15, we're conservative. Manual check needed before A/B test design.
-- Session length by user segment: Zhang Wei's analysis is aggregate only. Segmented report requested; ETA 2026-05-18.
+- Niche is unknown. If the account is entertainment-only, templates may fail; if it teaches a practical skill, templates are likely the fastest test.
+- Comment and DM history are unknown. The first offer should be chosen from repeated requests, not from the creator's favorite idea.
 
 ## Minimum test
-- Goal: Validate that delayed paywall increases conversion intent
-- Input: 200 users approaching paywall (Google Analytics → Events → "export_click" where count ≥ 2)
-- Action: Toggle PAYWALL_TRIGGER from 3 → 10 in LaunchDarkly (PM self-serve, no engineering)
-- Output: Upgrade page CTR + 14-day paid conversion rate
-- Pass condition: CTR ≥12% (current: 6%); conversion ≥3% in test cohort
-- Fail signal: CTR unchanged or total export usage drops >15%
-- Next step: If pass → request segmented session report from Zhang Wei → full rollout via LaunchDarkly
-- Do not do: Change pricing tiers or redesign pricing page before confirming paywall timing
+- Goal: Validate whether viewers will pay for a practical shortcut.
+- Input: Last 30 videos, top 20 comments, all DMs from the last 14 days.
+- Action: Pick the most repeated painful question and sell one ¥19-¥99 template with a pinned comment and DM reply.
+- Output: Clicks, paid orders, refund/complaint rate, buyer questions.
+- Pass condition: 10 paid orders or >=3% purchase rate from link clicks within 7 days.
+- Fail signal: High clicks but zero purchases, or buyers cannot use the template without personal help.
+- Next step: If pass, create a ¥299 service version for people who want it done for them.
+- Do not do: Launch a course, paid group, or coaching package before proving one small paid shortcut.
 
 ## Gates
-- Evidence gate: PASS — confirmed data from Stripe + Google Analytics; inference sourced from named team member with date
-- Data gap gate: HOLD — competitor thresholds and segmented session data unconfirmed; do not proceed to full rollout until resolved
-- Minimum test gate: NOT STARTED — requires LaunchDarkly config + cohort selection via GA
+- Evidence gate: HOLD — audience behavior must be checked in comments, DMs, and link clicks.
+- Revenue gate: HOLD — payer urgency and price tolerance are unverified.
+- Minimum-test gate: PASS — the 7-day paid template test is small enough to run immediately.
 
 ## Model check
-- Friction: Paywall placed too early = premature friction = rejection, not conversion
-- Incentive: Users need 7+ days to build habit before paywall feels like fair value exchange
+- Friction: A course asks for too much trust too early; a template asks for a small decision.
+- Feedback: Paid orders are stronger signal than views, likes, saves, or praise.
 
 ## Business check
+The first product should be a paid shortcut, not a content extension. The payer is the viewer who has the problem now. The urgency comes from saving time or avoiding a mistake. The first deal size can be ¥19-¥99; delivery cost stays low if the output is a reusable file. Repeat purchase becomes possible only after the first buyer gets a usable result.
 
-### Revenue check
-- Revenue model: SaaS monthly subscription
-- Payer: Free-tier users who hit the paywall
-- Why pay now: Users have built workflow dependency after 10 exports — paywall feels like fair value exchange
-- Deal size: Monthly subscription fee (exact tier TBD)
-- Delivery cost: Near-zero marginal cost per user (SaaS)
-- Repeat purchase: Monthly subscription = natural repeat
-- Verdict: proceed — model is sound, bottleneck is paywall timing
-
-### MVP scope
-- V1 scope (one sentence): Toggle paywall trigger from 3 to 10 exports and measure conversion impact
-- Explicit exclusions: pricing page redesign, tier restructuring, new feature development
-- Fastest delivery: 2 days (LaunchDarkly toggle + GA cohort setup)
-- Minimum customer: 200 users in test cohort
-- Minimum deal size: 6 paid conversions (=3% of 200)
-- Failure criteria: CTR unchanged AND total export usage drops >15%
-
-### Boss perspective
-- Why buy: 0.94% conversion is below industry benchmark; fixing paywall timing is the cheapest lever
-- Employee adoption: PM self-serve in LaunchDarkly — no engineering ticket needed
-- Implementation effort: One toggle change + cohort selection = 2 hours
-- Quick win (first week): Paywall CTR movement in GA within 48 hours
-- Cost of not buying: Continue bleeding 99% of users at the paywall with no data to guide improvement
-
-### Delivery loop
-- Input: 200 users selected via GA event filter ("export_click" count ≥ 2)
-- Process: Toggle PAYWALL_TRIGGER 3→10 in LaunchDarkly → run 2-week A/B test
-- Output: CTR + conversion rate comparison (GA + Stripe Dashboard)
-- Acceptance criteria: CTR ≥12%, test cohort conversion ≥3%
-- Client confirmation: Stripe Dashboard shows conversion rate change; Zhang Wei's segmented report validates
-- Reuse potential: A/B test framework reusable for future paywall experiments
+V1 is one template that solves one repeated viewer problem. Exclude full courses, communities, personal coaching, private groups, and custom work. The quick win is a buyer saying the template helped them finish a task faster.
 
 ## Usable result
-1. Toggle PAYWALL_TRIGGER from 3 → 10 in LaunchDarkly (PM self-serve, no ticket)
-2. Select 200-user cohort: Google Analytics → Events → "export_click" where count ≥ 2
-3. Run 2-week A/B; monitor CTR in GA + conversion in Stripe Dashboard
-4. If CTR ≥12% AND conversion ≥3% → get Zhang Wei's segmented report → full rollout
-5. If fail → pause; investigate session length by segment before changing strategy
+1. Export the last 30 video titles, top 20 comments, and all DMs from the last 14 days.
+2. Count repeated painful questions; pick the one with the clearest buyer urgency.
+3. Build one template/checklist in 2 hours and price it at ¥19-¥99.
+4. Add one pinned comment: "Need the template? Reply 'template' and I will send the link."
+5. Continue only if the offer gets 10 paid orders or >=3% purchase rate from link clicks in 7 days.
 ```
 
 Every answer must be specific enough to act on immediately. If it is not, the answer is a list of questions to resolve first.
 
 ## Quick Start
 
-**Personal install** (available in every project):
+KIM supports both Claude Code and Codex:
+
+- `.claude/skills/Kim/` is for Claude Code.
+- `.agents/skills/Kim/` is for Codex.
+
+**Claude Code personal install** (available in every project):
 
 ```bash
 mkdir -p ~/.claude/skills && cp -R Kim ~/.claude/skills/Kim
 ```
 
-**Project install** (scoped to one repo):
+**Claude Code project install** (scoped to one repo):
 
 ```bash
 mkdir -p .claude/skills && cp -R Kim .claude/skills/Kim
 ```
 
+**Codex project install** (scoped to one repo):
+
+```bash
+mkdir -p .agents/skills && cp -R Kim .agents/skills/Kim
+```
+
 Recommended reading order:
 
-1. `.claude/skills/Kim/SKILL.md` — the full operating protocol
-2. `.claude/skills/Kim/references/method.md` — the frame with examples
-3. `.claude/skills/Kim/references/path.md` — subject movement analysis
-4. `.claude/skills/Kim/references/models.md` — abstract decision models
-5. `.claude/skills/Kim/references/gates.md` — stage passage control
+1. `.claude/skills/Kim/SKILL.md` or `.agents/skills/Kim/SKILL.md` — the full operating protocol
+2. `references/method.md` — the frame with examples
+3. `references/path.md` — subject movement analysis
+4. `references/models.md` — abstract decision models
+5. `references/gates.md` — stage passage control
 
 ### Usage paths
 
@@ -240,6 +266,7 @@ Recommended reading order:
 | **Creation** | Subject, narrative, evidence | Draft or template |
 | **Debugging** | Symptom, evidence, root cause | Verified fix |
 | **Strategy** | Constraint, minimum test, gate | Action plan |
+| **Monetization** | Revenue, payer, urgency, delivery loop | First paid test |
 
 ---
 
@@ -293,6 +320,7 @@ Every KIM output walks through this spine. The question is never "what style sho
 | Mode | When | Structure |
 |------|------|-----------|
 | **Default output** | Complex task, multi-step decision | Breakdown, Decision, Path, Evidence, Data gaps, Minimum test, Gates, Model check, Business check (when commercial), Usable result |
+| **Business output** | Monetization, pricing, client delivery, MVP scope | Same rigor as default output, but Business check reads like a business conversation instead of a filled form |
 | **Short output** | Single focused question, narrow scope, no commercial dimension | Decision, Main path break, Do now (1-2-3), Do not do, Pass condition |
 
 ### Gates
@@ -369,6 +397,7 @@ Experience → distill → method → output → feedback → experience. Every 
 ## Files
 
 ```text
+.agents/skills/Kim/        # Codex skill package
 .claude/skills/Kim/
 ├── SKILL.md              # Full operating protocol
 ├── references/
