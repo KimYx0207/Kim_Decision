@@ -97,20 +97,34 @@ Use layout to create breathing room. A sharp answer should have a clear first sc
 Default visible report shape:
 
 1. **Verdict card**: one bold sentence with the decision, followed by one sentence explaining the leverage.
-2. **Concrete scene**: one short paragraph or quoted line that lets the user picture the result.
-3. **24-hour execution card**: 3-5 bullets, each starting with a strong verb and containing actor, input, action, or output.
-4. **Decision ruler**: pass signal, kill signal, test assumption, and hard gap.
+2. **Problem cut**: 2-4 sentences that name the real bottleneck, the false surface problem, and the cost of solving the wrong problem.
+3. **Fetch / evidence block**: state what is known, what is assumed, and which missing fact would change the decision. Keep it readable, not a full evidence table unless requested.
+4. **Thinking block**: explain why this route wins, what obvious path it rejects, and what tradeoff it accepts.
+5. **Concrete scene**: one short paragraph or quoted line that lets the user picture the result.
+6. **24-hour execution card**: one compact left-aligned paragraph, or 3-5 single-level bullets only when scanning would clearly improve execution.
+7. **Detailed execution**: keep the operational detail that would otherwise be lost, but group it into 2-4 readable blocks.
+8. **Review / decision ruler**: pass signal, kill signal, test assumption, hard gap, and the first review question.
 
 Spacing rules:
 
-- no paragraph longer than 3 lines in normal chat width
+- group logically connected sentences into one paragraph; do not break every sentence into its own paragraph
+- a normal paragraph should carry one idea in 2-4 connected sentences, unless the answer is a one-line verdict or a quote
+- use blank space to separate major blocks, not to chop a continuous thought into fragments
 - no bullet list longer than 6 items unless the user asks for a checklist
-- leave a blank line between major blocks
+- use real Markdown headings (`## 标题`) for major blocks; do not use bold-only labels (`**标题**`) as section headings
+- for Codex-visible answers, put a standalone raw HTML spacer line `<br>` between major blocks; ordinary Markdown blank lines may be visually collapsed by the renderer
+- still keep source-text blank lines around headings for copy/paste readability
+- do not wrap the spacer in backticks; write `<br>` alone on its own line
 - bold only the sentence or label that must be noticed; do not bold whole paragraphs
 - avoid more than 4 consecutive field labels such as "Actor / Input / Action / Output"; compress them into natural bullets
 - if the answer contains numbers, thresholds, or stop conditions, isolate them near the end so the user can find them quickly
+- do not cut important substance to make the page short; compress by grouping, not by deleting core logic, caveats, examples, or execution detail
+- keep default execution blocks left-aligned: short step title, then one compact paragraph explaining the move
+- use numbered lists only when strict order matters or the user asks for a checklist; use bullets only when they make scanning materially easier
+- avoid nested lists by default; if a list is necessary, keep it single-level and left-aligned
+- quote examples, user messages, and sample prompts as blockquotes or fenced blocks, not as loose lines
 
-Good block labels are short and human: `结论`, `为什么`, `先做`, `判断尺`, `直接用`. Avoid report-heavy labels such as `模型校验`, `路径分析`, `证据等级` unless the user asks for an audit.
+Good block labels are short and human: `结论`, `问题`, `取证`, `判断`, `先做`, `执行细节`, `复盘尺`. Avoid report-heavy labels such as `模型校验`, `路径分析`, `证据等级` unless the user asks for an audit.
 
 ## Best-path standard
 
@@ -340,19 +354,52 @@ For business, product, content, and strategy answers, prefer this readable shape
 
 [Concrete scene, buyer/user line, or before/after image.]
 
-**先做**
-- [24-hour action.]
-- [Artifact produced.]
-- [Who receives it / where it is tested.]
+<br>
 
-**判断尺**
-- 通过：[threshold]
-- 停止：[kill condition]
-- 假设：[test assumption]
-- 缺口：[hard gap]
+## 问题
+
+[2-4 sentences naming the real bottleneck, false surface problem, and why solving the wrong problem wastes effort.]
+
+<br>
+
+## 取证
+
+[What is known, what is assumed, and which missing fact would change the decision.]
+
+<br>
+
+## 判断
+
+[Why this route wins, what obvious path it rejects, and what tradeoff it accepts.]
+
+<br>
+
+## 先做
+
+[Write the first 24-hour move as one compact paragraph: actor, input, action, output, and where it will be tested.]
+
+<br>
+
+## 执行细节
+
+[Group the useful operational detail into 2-4 left-aligned paragraphs. Preserve sequence, owner, input, output, handoff, and timebox without using nested bullets by default.]
+
+<br>
+
+## 复盘尺
+
+通过：[threshold].
+
+停止：[kill condition].
+
+假设：[test assumption].
+
+缺口：[hard gap].
+
+复盘：[first review question].
 ```
 
-Adapt visible labels to the user's language and task. For small tasks, remove headings and answer in natural paragraphs. For complex tasks, add only the sections that carry new information, such as evidence gaps, risks, or verification.
+Adapt visible labels to the user's language and task. For small tasks, remove headings and answer in natural paragraphs. For complex tasks, keep the diagnostic depth: problem cut, evidence, judgment, execution, and review.
 
 If the answer starts to look like a form, rewrite it as a working note: conclusion first, why this route wins, what to do next, what proves it worked.
 
@@ -394,10 +441,13 @@ Core checks:
 - decision, intent, subject, and path exist internally; expose only the parts that change the answer
 - evidence labels and tiers appear only when they affect a decision, a current factual claim, or a high-risk recommendation
 - research attempt is required for critical C/D tier evidence, current external facts, and high-stakes claims
+- critical problem cut names the real bottleneck and rejects the false surface problem before execution starts
+- fetch/evidence block states known facts, assumptions, and the missing fact that would change the decision
+- thinking block explains why the chosen path wins and what tradeoff it accepts
 - minimum test or next action is visible
 - execution path names actor, input, action, output, pass/fail signal, and timebox when a plan is requested
 - data gaps are decision forks, not vague uncertainty
-- readable shape creates breathing room: short blocks, blank lines, highlighted verdict, and isolated pass/kill signals
+- readable shape creates breathing room without losing substance: real Markdown headings, raw `<br>` spacers between major blocks, highlighted verdict, problem cut, evidence, judgment, detailed execution, and isolated review signals
 - what not to do (when scope can expand)
 - acceptance criteria
 - usable result (specific enough to execute without research)

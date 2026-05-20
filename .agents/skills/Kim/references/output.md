@@ -75,7 +75,7 @@ Use headings only when they help scanning. A good answer can be three compact pa
 
 ## Readability layout
 
-Readable output needs contrast: one highlighted decision, one scene, one action block, one standard block.
+Readable output needs contrast and depth: one highlighted decision, one sharp problem cut, one evidence block, one judgment block, one scene, one action block, one detail block, one review block.
 
 Use this shape for most business, product, content, and strategy answers:
 
@@ -86,27 +86,71 @@ Why this route wins.
 
 Concrete scene or example.
 
-**Do first**
-- Action that starts within 24 hours.
-- Artifact created.
-- Real person or channel where it is tested.
+<br>
 
-**Decision ruler**
-- Pass:
-- Kill:
-- Assumption:
-- Hard gap:
+## Problem
+
+The real bottleneck, the false surface problem, and why solving the wrong thing wastes effort.
+
+<br>
+
+## Evidence
+
+Known facts, assumptions, and the missing fact that would change the decision.
+
+<br>
+
+## Judgment
+
+Why this route wins, what obvious path it rejects, and what tradeoff it accepts.
+
+<br>
+
+## Do first
+
+Write one compact paragraph with the first 24-hour move: actor, input, action, output, and where it will be tested.
+
+<br>
+
+## Execution detail
+
+Grouped detail that preserves the useful substance: sequence, owner, input, output, and handoff.
+
+<br>
+
+## Review ruler
+
+Pass:
+
+Kill:
+
+Assumption:
+
+Hard gap:
+
+Review:
 ```
 
 Rules:
 
-- Keep paragraphs to 1-3 sentences.
-- Put blank lines between blocks.
+- Group logically connected sentences into one paragraph; do not turn every sentence into its own paragraph.
+- A normal paragraph should carry one idea in 2-4 connected sentences, unless the answer is a one-line verdict or a quote.
+- Use blank space to separate major blocks, not to chop a continuous thought into fragments.
+- Use real Markdown headings (`##`) for major blocks. Do not use bold-only labels as section headings.
+- In Codex-visible answers, place a standalone raw HTML spacer line `<br>` between major blocks because ordinary blank lines may be visually collapsed.
+- Keep source-text blank lines around headings for copy/paste readability.
+- Do not wrap the spacer in backticks; write `<br>` alone on its own line.
 - Use bold for labels or the verdict, not for whole sections.
 - Use bullets for actions and standards, not for every thought.
 - Keep the first screen readable before the user scrolls.
 - Do not stack many labels like a form. If there are more than four labels, combine them into a sentence or split into two blocks.
 - Put pass and kill signals near the end, where they can be found quickly.
+- Do not delete important content just to make the answer short. Preserve core logic, caveats, examples, and execution detail by grouping them.
+- Do not jump from verdict to action when the user's request needs diagnosis. Preserve Critical, Fetch, Thinking, and Review as readable blocks: problem, evidence, judgment, review ruler.
+- Keep default execution blocks left-aligned: short step title, then one compact paragraph explaining the move.
+- Use numbered lists only when strict order matters or the user asks for a checklist. Use bullets only when they make scanning materially easier.
+- Avoid nested lists by default. If a list is necessary, keep it single-level and left-aligned.
+- Use blockquotes or fenced blocks for example messages, prompts, and user-facing copy so they do not blend into instructions.
 
 ## Anti-generic filter
 
@@ -175,6 +219,6 @@ Rules:
 8. **Delivery loop reads like a handoff.** "You give me X, I give you Y, acceptance criteria is Z, and the whole process is reusable next time." not "Input: ... Output: ..."
 9. **Execution beats explanation.** If a paragraph explains a principle but does not change the user's next move, cut it or turn it into an action.
 10. **Leave one useful image.** For creative, product, offer, and strategy work, include one concrete scene or example that lets the user picture the result.
-11. **Make the page breathe.** Use short blocks, blank lines, and a final decision ruler so the user can scan the answer in one pass.
+11. **Make the page breathe without thinning the answer.** Use real Markdown headings, raw `<br>` spacers between major blocks, grouped paragraphs, left-aligned execution blocks, concrete detail, and a final review ruler so the user can scan the answer without losing substance.
 
 Keep the analytical rigor. Change only the presentation layer.

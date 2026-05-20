@@ -98,18 +98,23 @@ Sell a "weekly restaurant promo poster package": 4 posters, delivered in 24 hour
 
 The owner should see a poster that says "Lunch set ¥29.9, valid 11:00-14:00" and immediately know where to use it.
 
-**Do first**
+<br>
 
-- Pick one restaurant category today and make 3 sample posters.
-- Pitch 10 nearby owners with the ¥299 package.
-- Take a deposit before custom work, then make 4 posters from the menu.
+## Do first
 
-**Decision ruler**
+Today, pick one restaurant category, make 3 sample posters, and pitch 10 nearby owners with the ¥299 package. Take a deposit before custom work, then make 4 posters from the menu.
 
-- Pass: 3 paid deposits within 7 days and delivery under 90 minutes per customer.
-- Kill: 10 direct pitches produce fewer than 2 serious price conversations, or every buyer requires heavy custom edits.
-- Assumption: restaurant owners will pay for a fixed 24-hour poster package before seeing custom work.
-- Hard gap: local willingness to pay and actual delivery time are unknown until the first 10 pitches.
+<br>
+
+## Decision ruler
+
+Pass: 3 paid deposits within 7 days and delivery under 90 minutes per customer.
+
+Kill: 10 direct pitches produce fewer than 2 serious price conversations, or every buyer requires heavy custom edits.
+
+Assumption: restaurant owners will pay for a fixed 24-hour poster package before seeing custom work.
+
+Hard gap: local willingness to pay and actual delivery time are unknown until the first 10 pitches.
 ```
 
 **You ask:**
@@ -125,18 +130,23 @@ Do not start with a course, community, or broad consulting offer. The first mone
 
 If viewers keep asking "Can you send the template?", "How do I do this?", or "Can you look at mine?", turn that repeated request into a downloadable shortcut.
 
-**Do first**
+<br>
 
-- Export the last 30 video titles, top 20 comments, and all DMs from the last 14 days.
-- Pick the most repeated urgent problem.
-- Build one ¥19-¥99 template or checklist and sell it through a pinned comment and DM reply.
+## Do first
 
-**Decision ruler**
+Export the last 30 video titles, top 20 comments, and all DMs from the last 14 days. Pick the most repeated urgent problem, then build one ¥19-¥99 template or checklist and sell it through a pinned comment and DM reply.
 
-- Pass: 10 paid orders or >=3% purchase rate from link clicks within 7 days.
-- Kill: high clicks but zero purchases, or buyers cannot use the template without personal help.
-- Assumption: repeated viewer questions indicate enough urgency to buy a low-price shortcut.
-- Hard gap: niche, audience size, comment quality, and DM history have not been inspected.
+<br>
+
+## Decision ruler
+
+Pass: 10 paid orders or >=3% purchase rate from link clicks within 7 days.
+
+Kill: high clicks but zero purchases, or buyers cannot use the template without personal help.
+
+Assumption: repeated viewer questions indicate enough urgency to buy a low-price shortcut.
+
+Hard gap: niche, audience size, comment quality, and DM history have not been inspected.
 ```
 
 Every answer must be specific enough to act on immediately. If it is not, the answer is a list of questions to resolve first.
