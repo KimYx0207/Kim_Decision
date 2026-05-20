@@ -306,6 +306,7 @@ Load one file at a time, only when the task needs it.
 - `references/verification.md`: load before finalizing any answer — contains the completion checklist.
 - `references/execution.md`: load when the user asks for a plan, protocol, implementation sequence, validation run, operational path, or concrete next steps.
 - `references/distillation.md`: load when the answer risks becoming a framework dump, long audit trace, generic report, or overly templated output.
+- `references/master-lens.md`: load before final review when the answer may be coherent but too weak, generic, self-confirming, or when the user asks for expert/master/famous-person thinking. Use it as backend pressure tests, not persona output.
 - `references/business.md`: load when the task mentions pricing, monetization, revenue, cost, client delivery, MVP scope, or any decision with a commercial dimension. Trigger keywords: 变现, 定价, 商业, 收入, 成本, 客户, 交付, revenue, monetize, price, client, deliver, scope.
 - `examples/decision.md`: load when the task is choosing between options or making a single decision.
 - `examples/creation.md`: load when the task involves designing or building something new.
@@ -316,7 +317,7 @@ Load one file at a time, only when the task needs it.
 
 Run the full frame internally. Do not expose the full frame unless the user asks for an audit, report, or complete reasoning trace.
 
-For plans or protocols, apply `references/execution.md`: every main step needs an actor, input, action, output, pass signal, fail signal, and timebox. For dense or complex answers, apply `references/distillation.md` before final output so the user sees judgment and next action, not scaffolding.
+For plans or protocols, apply `references/execution.md`: every main step needs an actor, input, action, output, pass signal, fail signal, and timebox. For dense or complex answers, apply `references/distillation.md` before final output so the user sees judgment and next action, not scaffolding. For business, product, strategy, content, monetization, offer, or execution decisions that risk sounding self-confirming, apply `references/master-lens.md` before final review.
 
 Default visible shape is a rhythm, not a template.
 

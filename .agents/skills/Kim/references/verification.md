@@ -43,6 +43,14 @@ Check before the final answer.
 - [ ] Each model gives a finding and fix.
 - [ ] The fix returns to the path.
 
+## Master lens (when loaded)
+
+- [ ] Expert patterns are converted into abstract pressure-test questions.
+- [ ] No famous person appears as a visible role or answer mode unless the user explicitly asked for source lineage.
+- [ ] At least three relevant lenses were checked for complex business, product, strategy, content, offer, or execution decisions.
+- [ ] The answer contains the useful fixes from the lenses, not the lens names.
+- [ ] First-screen, inversion, reality, manual-first, or operating gaps are corrected when they would change the answer.
+
 ## Gates
 
 - [ ] Path gate passed.

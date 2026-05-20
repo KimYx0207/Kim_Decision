@@ -196,7 +196,8 @@ Skill 名称是 `laojin`。也应该通过 `KIM`、`Kim`、`老金`、`问问老
 2. `references/method.md` — 核心框架及示例
 3. `references/path.md` — 主体运动分析
 4. `references/models.md` — 抽象判断模型
-5. `references/gates.md` — 阶段通过控制
+5. `references/master-lens.md` — 不做人物扮演的后台高手压力测试
+6. `references/gates.md` — 阶段通过控制
 
 ### 使用路径
 
@@ -356,6 +357,7 @@ flowchart LR
 │   ├── models.md         # 抽象判断模型
 │   ├── execution.md      # 执行计划协议
 │   ├── distillation.md   # 大师蒸馏协议
+│   ├── master-lens.md    # 后台高手压力测试
 │   ├── gates.md          # 阶段通过控制（11个门）
 │   ├── business.md       # 商业决策层
 │   ├── output.md         # 交付标准

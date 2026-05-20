@@ -6,6 +6,7 @@
 
 - Added execution-plan references for KIM/老金 across Codex, Claude, and Chinese docs.
 - Added distillation references for abstracting expert methods without turning them into persona prompts.
+- Added Master Lens / 高手镜头 references that turn famous expert patterns into backend pressure tests instead of visible persona modes.
 - Added the Sharp Core / 锋利内核 model to reduce generic answers and force a memorable decision kernel.
 
 ### Changed

@@ -196,7 +196,8 @@ Recommended reading order:
 2. `references/method.md` — the frame with examples
 3. `references/path.md` — subject movement analysis
 4. `references/models.md` — abstract decision models
-5. `references/gates.md` — stage passage control
+5. `references/master-lens.md` — backend expert pressure tests without persona output
+6. `references/gates.md` — stage passage control
 
 ### Usage paths
 
@@ -356,6 +357,7 @@ Experience → distill → method → output → feedback → experience. Every 
 │   ├── models.md         # Abstract decision models
 │   ├── execution.md      # Execution plan protocol
 │   ├── distillation.md   # Master distillation protocol
+│   ├── master-lens.md    # Backend expert pressure tests
 │   ├── gates.md          # Stage passage control (11 gates)
 │   ├── business.md       # Business decision layer
 │   ├── output.md         # Deliverable standards
