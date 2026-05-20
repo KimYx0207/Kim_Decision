@@ -1,69 +1,23 @@
 # Debugging Example
 
-## Breakdown
+## Visible output
 
-- Intent: restore a broken path.
-- Subject: the operator.
-- Path: run -> fail -> inspect -> test -> pass.
-- Constraint: avoid extra damage.
-- Acceptance: the same failing path passes.
+Do not change the plan again yet. The repeated failure means the system lacks evidence, not effort.
 
-## Decision
+First capture the smallest reproducible case: what input entered, what output appeared, what changed recently, and which assumption was supposed to hold. The useful moment is when the failure stops being a mood and becomes a record.
 
-Collect evidence before changing the solution.
+## Plan
 
-## Path
+Run one evidence pass before editing.
 
-- Motive: unblock work.
-- Interpretation: identify the failing step.
-- Action: capture the full symptom.
-- Resistance: guessing.
-- Signal: reproduction result.
-- State change: symptom becomes hypothesis.
-- Continuation: minimal fix and verification.
+- Input: failing case, last known good case, recent change.
+- Action: compare the two and write one falsifiable hypothesis.
+- Output: a reproduction note plus one targeted fix or rollback.
+- Pass condition: the same input produces the same failure twice.
+- Kill condition: if the failure cannot be reproduced, stop fixing and improve logging or observation first.
 
-## Evidence
+## Author check only, not user output
 
-- Confirmed: path is broken, symptom exists.
-- User-provided: avoid extra damage.
-- Inference: symptom suggests one root cause.
-- Unconfirmed: actual root cause (symptom is not cause).
-
-## Data gaps
-
-- Unknown: full reproduction path. Without reproduction, any fix is a guess. Capture exact steps before proceeding.
-
-## Minimum test
-
-- Goal: prove one root cause.
-- Input: full symptom and reproduction path.
-- Action: change one variable.
-- Output: test result.
-- Pass condition: failing path passes.
-- Fail signal: same failure remains.
-- Next step: keep the fix or reframe the hypothesis.
-- Do not do: stack multiple changes.
-
-## Gates
-
-- Path gate: PASS — fail → inspect → test → pass path is defined.
-- Evidence gate: HOLD — reproduction not yet captured; do not apply fix.
-- Minimum-test gate: NOT STARTED — reproduction steps not yet written.
-
-## Model check
-
-1. Root cause
-   Finding: symptom is not cause.
-   Fix: reproduce first.
-
-2. Small change
-   Finding: multiple changes hide evidence.
-   Fix: change one variable.
-
-3. Completion
-   Finding: a fix without verification is not done.
-   Fix: rerun the failing path.
-
-## Usable result
-
-Write reproduction steps, make one change, verify the same path.
+- Root cause gate: phenomenon, reproduction, recent change, evidence, hypothesis, minimum test.
+- Risk: broad rewrites hide the cause.
+- Feedback: every fix must produce a clearer signal than the previous attempt.

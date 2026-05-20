@@ -1,69 +1,21 @@
 # Calibration Example
 
-## Breakdown
+## Visible output
 
-- Intent: fix an existing draft or plan.
-- Subject: the receiver.
+The first break is not wording quality; it is that the receiver cannot tell what to do after reading it. Fix only that break first.
+
+Change the section so it ends with one action, one input, and one success signal. Example: "Send the current draft to one real receiver. Ask them to mark the first sentence where they stop knowing what to do. If they mark the same place twice, rewrite that sentence before touching the rest."
+
+## Use this
+
+Rewrite the first broken section today. Do not redesign the whole system yet.
+
+Pass condition: one receiver can state the next action without asking a follow-up question.
+
+Kill condition: if three receivers stop in three different places, the issue is not a sentence; the promise of the whole artifact is unclear.
+
+## Author check only, not user output
+
 - Path: receive -> understand -> act -> get signal.
-- Constraint: the receiver should not need extra explanation.
-- Acceptance: the receiver can take the next action.
-
-## Decision
-
-Fix the first path break.
-
-## Path
-
-- Motive: make progress.
-- Interpretation: understand the promise.
-- Action: follow one instruction.
-- Resistance: unclear wording or too many choices.
-- Signal: the receiver knows whether the action worked.
-- State change: confusion becomes progress.
-- Continuation: next action appears.
-
-## Evidence
-
-- Confirmed: draft exists, receiver exists, one path break identified.
-- User-provided: the receiver should not need extra explanation.
-- Inference: unclear wording is the primary blocker.
-- Unconfirmed: whether other sections also have breaks.
-
-## Data gaps
-
-- Unknown: how many sections have path breaks. If only one, fix it and ship. If many, prioritize by impact.
-
-## Minimum test
-
-- Goal: make one action clear.
-- Input: current draft.
-- Action: replace vague wording with action wording.
-- Output: revised section.
-- Pass condition: the receiver knows what to do next.
-- Fail signal: the receiver asks what now.
-- Next step: test the revised section with one receiver.
-- Do not do: rewrite the whole system first.
-
-## Gates
-
-- Path gate: PASS — path break located.
-- Evidence gate: PASS — break is visible in the draft.
-- Minimum-test gate: NOT STARTED — revised section not yet tested with receiver.
-
-## Model check
-
-1. Path
-   Finding: movement stops before action.
-   Fix: move the action earlier.
-
-2. Friction
-   Finding: choice load is high.
-   Fix: keep one main action.
-
-3. Narrative
-   Finding: the promise is hard to repeat.
-   Fix: state it in one sentence.
-
-## Usable result
-
-Rewrite the first broken section and test it.
+- Main leverage: reduce choice load before improving style.
+- Evidence gap: number of broken sections is unknown; test one section before broad rewrite.

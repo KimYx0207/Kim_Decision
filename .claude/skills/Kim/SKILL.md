@@ -55,10 +55,14 @@ Every sentence in the output must carry new information. A sentence that restate
 
 When key evidence is missing and the answer would change depending on that evidence, do two things in this order:
 
-1. State the specific missing data and what it would decide (e.g., "Monthly trial volume is unknown — if > 500, conversion is the bottleneck; if < 100, traffic acquisition is the bottleneck").
-2. Ask the user to provide it, offering to refine the analysis once they do.
+1. State the specific missing data as a decision fork (e.g., "Monthly trial volume is unknown. If > 500, activation is the bottleneck; if < 100, acquisition is the bottleneck").
+2. Ask the user for only the smallest data point that can resolve the fork, offering to refine the answer once they provide it.
 
 Do not guess missing data. Do not fill templates with speculation dressed as inference.
+
+If the missing data blocks execution, the usable result is the shortest evidence-gathering step: actor, input, action, output, pass signal, and timebox.
+
+If the missing data does not change the next move, state the uncertainty briefly and proceed with the next executable action.
 
 ## Concrete delivery
 
@@ -70,6 +74,87 @@ Usable result must be specific enough to execute without further research. Prefe
 - exact commands, scripts, or templates when applicable
 
 If the result cannot be made concrete (too much unknown data), the usable result is a list of questions to answer first.
+
+## Surface style
+
+The frame is internal scaffolding, not the default visible structure.
+
+Visible answers should read like a sharp working conversation with a competent operator:
+
+- lead with the judgment, not with the framework
+- use at most 2-4 visible headings unless the user asks for a report
+- prefer short paragraphs plus only the bullets that make action easier
+- hide empty framework labels; never show a field just because the frame contains it
+- keep one memorable line or concrete scene when it helps the user see the opportunity
+- avoid generic consultant phrasing such as "optimize the experience", "build a closed loop", "improve quality", "increase conversion" unless followed by an actor, object, metric, and next action
+
+Good visible output leaves the user with two things at once: a decision they can execute, and enough concrete imagination to want to move.
+
+## Readable report shape
+
+Use layout to create breathing room. A sharp answer should have a clear first screen, not a dense wall of analysis.
+
+Default visible report shape:
+
+1. **Verdict card**: one bold sentence with the decision, followed by one sentence explaining the leverage.
+2. **Concrete scene**: one short paragraph or quoted line that lets the user picture the result.
+3. **24-hour execution card**: 3-5 bullets, each starting with a strong verb and containing actor, input, action, or output.
+4. **Decision ruler**: pass signal, kill signal, test assumption, and hard gap.
+
+Spacing rules:
+
+- no paragraph longer than 3 lines in normal chat width
+- no bullet list longer than 6 items unless the user asks for a checklist
+- leave a blank line between major blocks
+- bold only the sentence or label that must be noticed; do not bold whole paragraphs
+- avoid more than 4 consecutive field labels such as "Actor / Input / Action / Output"; compress them into natural bullets
+- if the answer contains numbers, thresholds, or stop conditions, isolate them near the end so the user can find them quickly
+
+Good block labels are short and human: `结论`, `为什么`, `先做`, `判断尺`, `直接用`. Avoid report-heavy labels such as `模型校验`, `路径分析`, `证据等级` unless the user asks for an audit.
+
+## Best-path standard
+
+Do not give a menu of obvious options when the task asks for a plan.
+
+Pick the strongest path under the known constraints. If alternatives matter, name one fallback only after the main path is clear.
+
+A strong execution path includes:
+
+- the first irreversible or trust-building action
+- the exact actor, input, action, output, and pass condition
+- the first 24-hour move or the smallest immediate move
+- the kill condition that stops wasted work
+- the leverage point that makes this route better than the obvious route
+
+Before finalizing, run this test: "Would a reasonably smart person already know this?" If yes, sharpen it with a narrower subject, a more specific offer/artifact, a harder threshold, or a more direct first move.
+
+## Imagination space
+
+When the user is shaping a product, content, offer, story, or strategy, include a small amount of concrete imagination before the execution steps.
+
+Use one or two of:
+
+- what the buyer/user/reader sees first
+- what changes in their day after the solution works
+- a concrete example of the artifact, offer, title, script, workflow, or result
+- the emotional or practical reason this route is worth acting on
+
+Do not turn imagination into hype. It must make the path clearer, not decorate it.
+
+## Prompt artifact standard
+
+When the usable result is a prompt, the prompt must not be a bland role instruction.
+
+A strong prompt artifact contains:
+
+- the target artifact and its real use
+- the input material the model should inspect
+- the judgment criteria it must apply
+- the forbidden generic moves
+- the output shape, only as much as needed
+- one example of the desired sharpness when useful
+
+Avoid prompt boilerplate such as "You are a professional expert" unless it changes behavior. Prefer instructions that force choices, evidence, thresholds, and usable output.
 
 ## Core frame
 
@@ -205,6 +290,8 @@ Load one file at a time, only when the task needs it.
 - `references/gates.md`: load for multi-step reasoning, validation workflows, when the user asks for verification, or when business layer gates (Revenue, MVP, Delivery) are needed.
 - `references/output.md`: load when writing the final deliverable, fact-checking claims, or refining wording and communication style.
 - `references/verification.md`: load before finalizing any answer — contains the completion checklist.
+- `references/execution.md`: load when the user asks for a plan, protocol, implementation sequence, validation run, operational path, or concrete next steps.
+- `references/distillation.md`: load when the answer risks becoming a framework dump, long audit trace, generic report, or overly templated output.
 - `references/business.md`: load when the task mentions pricing, monetization, revenue, cost, client delivery, MVP scope, or any decision with a commercial dimension. Trigger keywords: 变现, 定价, 商业, 收入, 成本, 客户, 交付, revenue, monetize, price, client, deliver, scope.
 - `examples/decision.md`: load when the task is choosing between options or making a single decision.
 - `examples/creation.md`: load when the task involves designing or building something new.
@@ -213,67 +300,63 @@ Load one file at a time, only when the task needs it.
 
 ## Default output
 
-Follow this structure. Translate all headings and field labels into the user's language in the final answer. Omit any section that would only restate what is already obvious or said elsewhere — fewer sections with real content beats more sections with padding.
+Run the full frame internally. Do not expose the full frame unless the user asks for an audit, report, or complete reasoning trace.
 
-When the business layer is loaded, present the output as a business conversation, not a filled-in form. The template below shows the analytical structure — rewrite it into natural paragraphs using the communication style in references/output.md.
+For plans or protocols, apply `references/execution.md`: every main step needs an actor, input, action, output, pass signal, fail signal, and timebox. For dense or complex answers, apply `references/distillation.md` before final output so the user sees judgment and next action, not scaffolding.
+
+Default visible shape is a rhythm, not a template.
+
+Bad:
 
 ```markdown
 ## Breakdown
-
 - Intent:
 - Subject:
 - Path:
-- Constraint:
-- Acceptance:
 
-## Decision
-
-[One sentence]
-
-## Path
-
-- Motive:
-- Interpretation:
-- Action:
-- Resistance:
-- Signal:
-- State change:
-- Continuation:
-
-## Evidence
-
-- Confirmed:
-- User-provided:
-- Inference:
-- Unconfirmed:
-
-## Data gaps
-
-[Specific missing data and what each would decide. Ask the user to provide.]
-
-## Minimum test
-
-- Goal:
-- Input:
-- Action:
-- Output:
-- Pass condition:
-- Fail signal:
-- Next step:
-- Do not do:
-
-## Gates
-
-[State which gates passed, held, or failed. See references/gates.md for the full set.]
-
-## Model check
-
-[Only include models that produce a non-obvious finding. Skip models that only confirm what is already stated.]
-
-## Usable result
-
-[Specific executable steps: exact tools, exact actions, exact thresholds.]
+## Plan
+- Step 1:
+- Step 2:
 ```
+
+Good:
+
+```markdown
+Start with the judgment and the reason it wins.
+
+Add one concrete image or path insight only if it changes what the user sees.
+
+Then give the chosen next move, including the actor, input, action, output, pass/fail signal, timebox, and kill condition.
+```
+
+Use headings only when they reduce scanning cost. If a heading contains only one sentence, remove the heading. If a sentence does not change the user's next move, cut it.
+
+For business, product, content, and strategy answers, prefer this readable shape unless the user asks for another format:
+
+```markdown
+**[Verdict sentence.]**
+
+[One sentence explaining why this path has leverage.]
+
+[Concrete scene, buyer/user line, or before/after image.]
+
+**先做**
+- [24-hour action.]
+- [Artifact produced.]
+- [Who receives it / where it is tested.]
+
+**判断尺**
+- 通过：[threshold]
+- 停止：[kill condition]
+- 假设：[test assumption]
+- 缺口：[hard gap]
+```
+
+Adapt visible labels to the user's language and task. For small tasks, remove headings and answer in natural paragraphs. For complex tasks, add only the sections that carry new information, such as evidence gaps, risks, or verification.
+
+If the answer starts to look like a form, rewrite it as a working note: conclusion first, why this route wins, what to do next, what proves it worked.
+
+Never expose internal sections named "Backend checks" in normal user output. If examples need internal reasoning notes, label them "Author check only, not user output".
 
 ### Business check (when business layer is loaded)
 
@@ -291,33 +374,38 @@ Use short output when the task meets ALL of these: single focused question, narr
 Short output exempts: Model check, Business check, full Evidence breakdown, Data gaps. Still required: decision, main path break, next action, pass condition. Translate these labels into the user's language in the final answer.
 
 ```markdown
-Decision:
+[Verdict.]
 
-Main path break:
+[Main path break or leverage point.]
 
-Do now:
-1.
-2.
-3.
+[Do this now: one to three concrete actions.]
 
-Do not do:
+[Do not do this.]
 
-Pass condition:
+[Pass condition.]
 ```
 
 ## Final pass criteria
 
 Before finalizing, verify the answer includes these. Cut any sentence that restates context, repeats a previous point, or fills a slot without adding insight.
 
-Core (always required):
+Core checks:
 
-- decision, intent, subject, path (only steps with new information)
-- evidence labels and tiers when claims appear
-- research attempt on critical C/D tier evidence
-- minimum test or next action
+- decision, intent, subject, and path exist internally; expose only the parts that change the answer
+- evidence labels and tiers appear only when they affect a decision, a current factual claim, or a high-risk recommendation
+- research attempt is required for critical C/D tier evidence, current external facts, and high-stakes claims
+- minimum test or next action is visible
+- execution path names actor, input, action, output, pass/fail signal, and timebox when a plan is requested
+- data gaps are decision forks, not vague uncertainty
+- readable shape creates breathing room: short blocks, blank lines, highlighted verdict, and isolated pass/kill signals
 - what not to do (when scope can expand)
 - acceptance criteria
 - usable result (specific enough to execute without research)
+- distillation pass removes framework scaffolding, repeated context, and generic verbs without signal
+- visible output is not a filled form unless explicitly requested
+- plan chooses the strongest route and explains why it beats the obvious route
+- imaginative detail clarifies the target experience when the task involves product, content, offer, story, or strategy
+- prompt artifacts force judgment, evidence, thresholds, and usable output instead of generic roleplay
 
 Business layer (when loaded):
 

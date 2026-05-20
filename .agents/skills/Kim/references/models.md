@@ -135,6 +135,27 @@ Questions:
 - What example makes it clear?
 - What line should be remembered?
 
+## Sharp kernel model (锋利内核模型)
+
+Find the smallest sentence that keeps the decision sharp.
+
+Use when the answer risks becoming broad, polite, or complete but not forceful.
+
+Questions:
+
+- What is the one claim the user must remember?
+- Which subject, pain, offer, proof, or threshold makes the claim specific?
+- What obvious but weaker path should be rejected?
+- What first move proves the kernel is real?
+
+Output:
+
+```text
+Kernel:
+Reject:
+Proof move:
+```
+
 ## Selection rule
 
 Use one model for simple tasks.

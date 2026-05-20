@@ -92,66 +92,24 @@ This is not a new concept. Mature decision teams already do this. KIM turns it i
 **KIM outputs (business format):**
 
 ```
-## Breakdown
-- Intent: Make first revenue from a small AI service within 30 days
-- Subject: Local restaurant owners who need fresh promotion material but do not have a designer
-- Path: Identify owner -> show sample poster -> offer fixed package -> collect deposit -> deliver first batch -> ask for monthly renewal
-- Constraint: Solo operator, no ad budget, 30-day target, must use tools already available
-- Acceptance: At least 3 paying customers, each paying ¥299 or more, with one customer willing to renew
+**Proceed, but do not sell a generic "AI design service".**
 
-## Decision
-Proceed, but sell a narrow "weekly restaurant promo poster package", not a generic AI design service.
+Sell a "weekly restaurant promo poster package": 4 posters, delivered in 24 hours, starting at ¥299. The owner is not buying AI; they are buying promotion material for today's menu, delivery app, WeChat group, and storefront.
 
-## Path
-- Motive: Restaurant owners need visible offers for lunch specials, delivery platforms, WeChat groups, and storefront posters.
-- Interpretation: "AI design" sounds abstract; "4 promo posters for this week's dishes" sounds like a concrete business result.
-- Action: Make 3 sample posters for one real restaurant category, then sell the package in person or through WeChat.
-- Resistance: Owners may distrust AI output and may not want to think through design requirements.
-- Signal: They ask "can you make one for my menu?" or "how much for a month?" instead of asking how the AI works.
-- State change: The owner moves from "interesting tool" to "this can help me sell today's dishes".
-- Continuation: If one weekly batch is accepted, convert it into a monthly package.
+The owner should see a poster that says "Lunch set ¥29.9, valid 11:00-14:00" and immediately know where to use it.
 
-## Evidence
-- User-provided, tier A: The 30-day income goal and solo-operator constraint come from the question.
-- Confirmed, tier A: A paid order is the only valid proof; likes, compliments, and "looks good" are not revenue.
-- Inference, tier C: Restaurants are better first customers than broad "small businesses" because the offer can be tied to visible daily sales.
-- Unconfirmed, tier D: Local owners' willingness to pay ¥299+ is unknown until tested.
+**Do first**
 
-## Data gaps
-- Local willingness to pay is unknown. If owners reject ¥299, test ¥99 one-off posters before abandoning the channel.
-- Delivery time is unknown. If one package takes more than 90 minutes, the service will not scale as a side income.
+- Pick one restaurant category today and make 3 sample posters.
+- Pitch 10 nearby owners with the ¥299 package.
+- Take a deposit before custom work, then make 4 posters from the menu.
 
-## Minimum test
-- Goal: Validate that local owners will pay for a narrow AI-assisted poster package
-- Input: 10 nearby restaurants or food stalls with visible promotions
-- Action: Create 3 sample posters for one category, then pitch a ¥299 package: 4 posters delivered within 24 hours
-- Output: Deposits collected, delivery time per package, owner feedback
-- Pass condition: 3 paid deposits within 7 days and average delivery time <=90 minutes per customer
-- Fail signal: Fewer than 2 deposits after 10 direct pitches, or every buyer asks for heavy custom edits
-- Next step: If pass, sell a ¥799/month renewal package with 4 weekly batches
-- Do not do: Build a website, run ads, make 20 service packages, or sell "AI consulting" before the first paid order
+**Decision ruler**
 
-## Gates
-- Evidence gate: HOLD — willingness to pay is unconfirmed until direct pitches happen.
-- Revenue gate: PASS for test — payer, price, urgency, delivery cost, and repeat path are defined.
-- MVP gate: PASS — one package, one customer type, 7-day test.
-- Delivery gate: PASS if the 24-hour delivery promise is met without custom design chaos.
-
-## Model check
-- Friction: A generic service creates too much explanation. A fixed poster package reduces buyer thinking.
-- Incentive: Owners care about more orders, not AI. The pitch must show the dish, price, and promotion channel.
-
-## Business check
-The play makes money only if an owner pays for a result they already understand: better-looking promotion material for dishes they are trying to sell this week. The payer is the owner or store manager. The first deal size is ¥299 because it is small enough for impulse testing but high enough to expose whether the service has value.
-
-V1 does one thing only: 4 promo posters for one restaurant, delivered in 24 hours. Exclude logo design, menu redesign, brand strategy, video, ad buying, and long copywriting. Week one quick win is simple: a store owner receives usable posters and asks for the next batch.
-
-## Usable result
-1. Pick one category today: milk tea, hotpot, lunch set, barbecue, or bakery.
-2. Make 3 sample posters for that category with the same package promise: "4 promo posters, delivered in 24 hours, ¥299."
-3. Pitch 10 nearby owners in person or on WeChat before changing the offer.
-4. Take a deposit before doing custom work.
-5. Continue only if 3 owners pay within 7 days and delivery stays under 90 minutes per customer.
+- Pass: 3 paid deposits within 7 days and delivery under 90 minutes per customer.
+- Kill: 10 direct pitches produce fewer than 2 serious price conversations, or every buyer requires heavy custom edits.
+- Assumption: restaurant owners will pay for a fixed 24-hour poster package before seeing custom work.
+- Hard gap: local willingness to pay and actual delivery time are unknown until the first 10 pitches.
 ```
 
 **You ask:**
@@ -161,68 +119,29 @@ V1 does one thing only: 4 promo posters for one restaurant, delivered in 24 hour
 **KIM outputs (default format):**
 
 ```
-## Breakdown
-- Intent: Turn existing attention into first revenue
-- Subject: Viewers who already watch the account for practical advice
-- Path: Watch video -> trust the problem diagnosis -> want a shortcut -> buy a small template/service -> get result -> return for a larger offer
-- Constraint: No audience size, niche, price point, or conversion data provided
-- Acceptance: First 10 paid orders from current audience without paid ads
+**Sell the smallest paid shortcut related to the content that already gets comments.**
 
-## Decision
-Sell the smallest paid shortcut related to the content that already gets comments, not a course, community, or broad consulting offer.
+Do not start with a course, community, or broad consulting offer. The first money is usually hidden in the same question viewers keep repeating.
 
-## Path
-- Motive: Viewers want a faster path from "I learned something" to "I can use this today".
-- Interpretation: A low-price template feels safer than a high-price promise.
-- Action: Package the top repeated problem into a ¥19-¥99 downloadable template, checklist, or mini diagnosis.
-- Resistance: Viewers may like the content but not trust the paid result yet.
-- Signal: Comments asking "can you send the template?", "how do I do this?", or "can you look at mine?".
-- State change: The account changes from attention collection to transaction testing.
-- Continuation: Buyers of the small product become candidates for service, membership, or higher-ticket delivery.
+If viewers keep asking "Can you send the template?", "How do I do this?", or "Can you look at mine?", turn that repeated request into a downloadable shortcut.
 
-## Evidence
-- User-provided, tier A: The account has views but no revenue.
-- Confirmed, tier A: Revenue requires a paid offer; views alone are not a monetization model.
-- Inference, tier C: Repeated viewer questions are the best source for the first paid product.
-- Unconfirmed, tier D: Audience size, niche, comment quality, and buyer urgency are unknown.
+**Do first**
 
-## Data gaps
-- Niche is unknown. If the account is entertainment-only, templates may fail; if it teaches a practical skill, templates are likely the fastest test.
-- Comment and DM history are unknown. The first offer should be chosen from repeated requests, not from the creator's favorite idea.
+- Export the last 30 video titles, top 20 comments, and all DMs from the last 14 days.
+- Pick the most repeated urgent problem.
+- Build one ¥19-¥99 template or checklist and sell it through a pinned comment and DM reply.
 
-## Minimum test
-- Goal: Validate whether viewers will pay for a practical shortcut.
-- Input: Last 30 videos, top 20 comments, all DMs from the last 14 days.
-- Action: Pick the most repeated painful question and sell one ¥19-¥99 template with a pinned comment and DM reply.
-- Output: Clicks, paid orders, refund/complaint rate, buyer questions.
-- Pass condition: 10 paid orders or >=3% purchase rate from link clicks within 7 days.
-- Fail signal: High clicks but zero purchases, or buyers cannot use the template without personal help.
-- Next step: If pass, create a ¥299 service version for people who want it done for them.
-- Do not do: Launch a course, paid group, or coaching package before proving one small paid shortcut.
+**Decision ruler**
 
-## Gates
-- Evidence gate: HOLD — audience behavior must be checked in comments, DMs, and link clicks.
-- Revenue gate: HOLD — payer urgency and price tolerance are unverified.
-- Minimum-test gate: PASS — the 7-day paid template test is small enough to run immediately.
-
-## Model check
-- Friction: A course asks for too much trust too early; a template asks for a small decision.
-- Feedback: Paid orders are stronger signal than views, likes, saves, or praise.
-
-## Business check
-The first product should be a paid shortcut, not a content extension. The payer is the viewer who has the problem now. The urgency comes from saving time or avoiding a mistake. The first deal size can be ¥19-¥99; delivery cost stays low if the output is a reusable file. Repeat purchase becomes possible only after the first buyer gets a usable result.
-
-V1 is one template that solves one repeated viewer problem. Exclude full courses, communities, personal coaching, private groups, and custom work. The quick win is a buyer saying the template helped them finish a task faster.
-
-## Usable result
-1. Export the last 30 video titles, top 20 comments, and all DMs from the last 14 days.
-2. Count repeated painful questions; pick the one with the clearest buyer urgency.
-3. Build one template/checklist in 2 hours and price it at ¥19-¥99.
-4. Add one pinned comment: "Need the template? Reply 'template' and I will send the link."
-5. Continue only if the offer gets 10 paid orders or >=3% purchase rate from link clicks in 7 days.
+- Pass: 10 paid orders or >=3% purchase rate from link clicks within 7 days.
+- Kill: high clicks but zero purchases, or buyers cannot use the template without personal help.
+- Assumption: repeated viewer questions indicate enough urgency to buy a low-price shortcut.
+- Hard gap: niche, audience size, comment quality, and DM history have not been inspected.
 ```
 
 Every answer must be specific enough to act on immediately. If it is not, the answer is a list of questions to resolve first.
+
+KIM's visible answer should read in a natural format by default: judgment first, action next, standards last. It should expose the test assumption being checked and name hard gaps separately from ordinary risks.
 
 ## Quick Start
 
@@ -331,9 +250,11 @@ Every KIM output walks through this spine. The question is never "what style sho
 
 | Mode | When | Structure |
 |------|------|-----------|
-| **Default output** | Complex task, multi-step decision | Breakdown, Decision, Path, Evidence, Data gaps, Minimum test, Gates, Model check, Business check (when commercial), Usable result |
-| **Business output** | Monetization, pricing, client delivery, MVP scope | Same rigor as default output, but Business check reads like a business conversation instead of a filled form |
-| **Short output** | Single focused question, narrow scope, no commercial dimension | Decision, Main path break, Do now (1-2-3), Do not do, Pass condition |
+| **Default output** | Complex task, multi-step decision | Run the full frame internally; show only the verdict, key insight, chosen plan, usable artifact, and pass/kill condition |
+| **Business output** | Monetization, pricing, client delivery, MVP scope | Explain who pays, why now, what V1 delivers, and what visible result appears in week one |
+| **Short output** | Single focused question, narrow scope, no commercial dimension | One-line decision, one path break, 1-3 immediate actions, what not to do, pass condition |
+
+The frame is not meant to be exposed as a filled form by default. KIM runs intent, path, evidence, minimum test, and gates internally, then rewrites the result as a working note: judgment first, why this route wins, what to do next, and what proves it worked.
 
 ### Gates
 
@@ -387,8 +308,8 @@ Experience → distill → method → output → feedback → experience. Every 
 | **Path** | Map how the subject moves from current state to target state: Motive → Interpretation → Action → Resistance → Signal → State Change → Continuation |
 | **Constraint** | State the hard limits: time, budget, people, tools, rules, data, risk tolerance. |
 | **Evidence** | Separate into: Confirmed, User-provided, Inference, Unconfirmed. Verify claims that depend on external rules, systems, or market conditions. |
-| **Minimum Test** | Define the smallest test that can change the decision. Must include: Goal, Input, Action, Output, Pass condition, Fail signal, Next step, Do not do. |
-| **Models** | Use abstract decision models (Essence, Path, Constraint, Incentive, Friction, Probability, Risk, Feedback, Compounding, Boundary, Narrative). Pick the smallest set that can improve the answer. |
+| **Minimum Test** | Define the smallest test that can change the decision. Must include: Goal, Input, Action, Output, Test assumption, Pass condition, Fail signal, Next step, Do not do. |
+| **Models** | Use abstract decision models (Essence, Path, Constraint, Incentive, Friction, Probability, Risk, Feedback, Compounding, Boundary, Narrative, Sharp Core). Pick the smallest set that can improve the answer. |
 | **Gates** | Stop skipped steps. A stage reached is not a stage passed. |
 | **Output** | Return a usable artifact: decision, path, checklist, template, acceptance criteria, or next action. |
 
@@ -403,6 +324,13 @@ Experience → distill → method → output → feedback → experience. Every 
 | Data gap protocol | When key evidence is missing, state what is missing and ask — never guess |
 | Information density | Every sentence must carry new information. Cut sentences that restate the obvious |
 | Concrete delivery | Prefer exact tools, exact actions, exact thresholds. If you cannot be concrete, the result is a list of questions to answer first |
+| Anti-generic filter | Cut advice that would fit any project; each recommendation needs an actor, object, action, signal, or threshold |
+| Best path | When the user asks for a plan, choose the strongest route instead of hiding indecision inside a menu |
+| Imagination space | Product, content, offer, and strategy work should include one concrete scene or example that helps the user see the result without hype |
+| Prompt quality | Prompt artifacts must force judgment, evidence, thresholds, and usable output instead of empty expert-role boilerplate |
+| Natural format | Default answers should not look like filled forms; they should read as working notes with judgment, action, and standards |
+| Test assumption | Every execution plan should name the assumption being tested, not only the action being taken |
+| Hard gaps | Missing information that blocks judgment must be labeled separately from ordinary risk |
 
 ---
 
@@ -416,6 +344,8 @@ Experience → distill → method → output → feedback → experience. Every 
 │   ├── method.md         # Core frame with examples
 │   ├── path.md           # Subject movement analysis
 │   ├── models.md         # Abstract decision models
+│   ├── execution.md      # Execution plan protocol
+│   ├── distillation.md   # Master distillation protocol
 │   ├── gates.md          # Stage passage control (11 gates)
 │   ├── business.md       # Business decision layer
 │   ├── output.md         # Deliverable standards
