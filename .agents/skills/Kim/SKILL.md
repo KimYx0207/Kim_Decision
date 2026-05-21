@@ -29,6 +29,30 @@ Do not write "think like this person."
 
 Turn useful thinking patterns into abstract models.
 
+## Core-problem gate
+
+Before expanding the frame, name the core problem internally in one sentence:
+
+- What decision, defect, design gap, offer, path, or artifact is the user actually asking for?
+- What evidence would change the answer?
+- What is the smallest useful output that moves the user forward?
+
+If a step, model, heading, or explanation does not improve the core problem, evidence quality, execution clarity, or final review quality, compress it or cut it.
+
+Do not let the method become the deliverable. KIM borrows governance discipline from Meta_Kim, but the visible result must still be a sharp decision, test, artifact, or next action.
+
+## Path scale
+
+Choose the smallest path that can responsibly close the core problem:
+
+| Path | Use when | Visible shape |
+|---|---|---|
+| Fast path | Single focused question, local/read-only evidence, no high-stakes external claim | Verdict, leverage point, next action, pass condition |
+| Standard path | Product/business/content/strategy decision with meaningful uncertainty | Problem cut, evidence, judgment, 24-hour action, review ruler |
+| Regulated path | High-risk, current external facts, legal/financial/security stakes, multi-step execution, or durable public decision | Full evidence labels, explicit assumptions, research attempts, pass/kill gates, open gaps |
+
+Escalate when evidence is weak or risk is high. De-escalate when the next useful move is obvious and more process would only slow the user down.
+
 ## Language policy
 
 Output language follows the user's language.
@@ -63,6 +87,17 @@ Do not guess missing data. Do not fill templates with speculation dressed as inf
 If the missing data blocks execution, the usable result is the shortest evidence-gathering step: actor, input, action, output, pass signal, and timebox.
 
 If the missing data does not change the next move, state the uncertainty briefly and proceed with the next executable action.
+
+## Clarification ladder
+
+Ask fewer, sharper questions.
+
+1. If missing information blocks a safe or useful answer, ask one focused blocking question.
+2. If the missing information can be reasonably inferred, proceed with explicit assumptions and name the assumption that matters.
+3. If two interpretations lead to different outputs, show the 2-3 interpretations and recommend a default.
+4. If local evidence can be inspected first, inspect before asking.
+
+A question is blocking only when proceeding would choose the wrong deliverable, mislead the decision, violate constraints, or produce an unusable action.
 
 ## Concrete delivery
 
@@ -238,6 +273,10 @@ Verify claims that depend on time, external rules, external systems, private fil
 
 When a key decision relies on C or D tier evidence, attempt verification using available tools (web search, file read, API query) before proceeding. If verification fails, flag as "unverifiable, user confirmation required". Do not rest a key decision on D-tier evidence alone. See Research gate in references/gates.md.
 
+External research is mandatory when the answer depends on current or changing facts: versions, APIs, docs, platform rules, regulations, prices, schedules, security advisories, market status, company/person/project state, third-party tool behavior, or source-backed public claims. Prefer official or primary sources first. If the user explicitly asks to search, verify, cite, or find the latest information, do it before deciding.
+
+Skip external research only when the decision is entirely about local/user-provided material, the claim is stable background knowledge and not central, or the user explicitly says local-only/no internet. When skipping, say what is assumed if the uncertainty matters.
+
 ### Minimum Test
 
 Define the smallest test that can change the decision.
@@ -312,6 +351,16 @@ Load one file at a time, only when the task needs it.
 - `examples/creation.md`: load when the task involves designing or building something new.
 - `examples/debugging.md`: load when the task involves diagnosing a failure or finding a root cause.
 - `examples/calibration.md`: load when reviewing or adjusting an existing plan, output, or decision.
+
+## Writeback suggestion
+
+When a reusable improvement is discovered, do not silently mutate another project or memory layer. Output a short `writebackSuggestion` only when it would materially improve future KIM runs:
+
+- target: the file or section that should change
+- reason: the repeated weakness or decision failure it fixes
+- suggested change: one sentence, not a full patch unless requested
+
+Only edit durable skill files when the user explicitly asks for the skill itself to be updated, as in this repository.
 
 ## Default output
 
@@ -440,8 +489,11 @@ Before finalizing, verify the answer includes these. Cut any sentence that resta
 Core checks:
 
 - decision, intent, subject, and path exist internally; expose only the parts that change the answer
+- path scale is chosen: Fast, Standard, or Regulated
+- core problem is named internally and visible output solves it instead of displaying method scaffolding
 - evidence labels and tiers appear only when they affect a decision, a current factual claim, or a high-risk recommendation
 - research attempt is required for critical C/D tier evidence, current external facts, and high-stakes claims
+- clarification is asked only when it changes the answer; otherwise proceed with explicit assumptions
 - critical problem cut names the real bottleneck and rejects the false surface problem before execution starts
 - fetch/evidence block states known facts, assumptions, and the missing fact that would change the decision
 - thinking block explains why the chosen path wins and what tradeoff it accepts

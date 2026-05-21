@@ -4,6 +4,8 @@ Check before the final answer.
 
 ## Frame
 
+- [ ] Core problem is named internally.
+- [ ] Path scale is chosen: Fast, Standard, or Regulated.
 - [ ] Intent is clear.
 - [ ] Subject is clear.
 - [ ] Path is clear.
@@ -22,7 +24,8 @@ Check before the final answer.
 
 - [ ] Missing data that would change the decision is stated explicitly.
 - [ ] Each gap includes what it would decide.
-- [ ] User is asked to provide missing data.
+- [ ] User is asked only for missing data that blocks a useful answer.
+- [ ] Safe assumptions are labeled instead of turned into unnecessary questions.
 
 ## Minimum test
 
@@ -70,7 +73,14 @@ Check before the final answer.
 
 - [ ] Key decisions not resting on D-tier evidence alone.
 - [ ] C/D tier evidence that would change the decision has at least one verification attempt.
+- [ ] Current or changing external facts are searched or explicitly marked local-only by user instruction.
+- [ ] Official or primary sources are preferred when available.
 - [ ] Failed verification attempts are flagged with "unverifiable, user confirmation required".
+
+## Writeback
+
+- [ ] Reusable skill improvement is captured as `writebackSuggestion` when relevant.
+- [ ] Durable skill files are edited only when the user explicitly asked to update the skill.
 
 ## Business layer (when loaded)
 

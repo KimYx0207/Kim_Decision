@@ -267,6 +267,22 @@ Every KIM output walks through this spine. The question is never "what style sho
 
 The frame is not meant to be exposed as a filled form by default. KIM runs intent, path, evidence, minimum test, and gates internally, then rewrites the result as a working note: judgment first, why this route wins, what to do next, and what proves it worked.
 
+### Core-problem gate
+
+Before expanding the frame, KIM names the real problem internally: the decision, defect, design gap, offer, path, or artifact the user actually needs. Anything that does not improve that core problem, evidence quality, execution clarity, or review quality gets compressed or cut.
+
+KIM can borrow governance discipline from Meta_Kim, but the visible result stays practical: a sharp decision, minimum test, artifact, or next action.
+
+### Path scale
+
+| Path | Use when | Result |
+|------|----------|--------|
+| **Fast** | One focused question, local/read-only evidence, low risk | Verdict, leverage point, next action, pass condition |
+| **Standard** | Product, business, content, or strategy decision with real uncertainty | Problem cut, evidence, judgment, 24-hour action, decision ruler |
+| **Regulated** | High-risk, current external facts, legal/financial/security stakes, multi-step execution, or public durable decision | Evidence labels, research attempts, assumptions, pass/kill gates, hard gaps |
+
+The protocol escalates with risk. It does not force a heavy process just because the skill was triggered.
+
 ### Gates
 
 A stage reached is not a stage passed.
@@ -288,6 +304,8 @@ flowchart LR
 ```
 
 Gates exist to stop AI from skipping steps. Reaching a stage means you are there; passing the gate means you are allowed to move on.
+
+The gate set now includes a clarification boundary and a research boundary. KIM asks only the smallest blocking question, inspects local evidence before asking when possible, and verifies current or changing external facts such as APIs, documentation, rules, prices, security advisories, market status, or third-party tool behavior before using them as decision basis.
 
 ### Closed loop
 
@@ -337,6 +355,8 @@ Experience → distill → method → output → feedback → experience. Every 
 | Concrete delivery | Prefer exact tools, exact actions, exact thresholds. If you cannot be concrete, the result is a list of questions to answer first |
 | Anti-generic filter | Cut advice that would fit any project; each recommendation needs an actor, object, action, signal, or threshold |
 | Best path | When the user asks for a plan, choose the strongest route instead of hiding indecision inside a menu |
+| Core-problem first | The method must solve the actual decision or artifact, not display its own scaffolding |
+| Research boundary | Current external facts and source-backed claims must be searched or explicitly labeled as unverified/local-only |
 | Imagination space | Product, content, offer, and strategy work should include one concrete scene or example that helps the user see the result without hype |
 | Prompt quality | Prompt artifacts must force judgment, evidence, thresholds, and usable output instead of empty expert-role boilerplate |
 | Natural format | Default answers should not look like filled forms; they should read as working notes with judgment, action, and standards |

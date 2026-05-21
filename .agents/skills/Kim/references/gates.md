@@ -1,5 +1,36 @@
 # Gates
 
+## Core-problem gate
+
+No method expansion before the real problem is named.
+
+Required:
+
+```text
+core problem
+decision or artifact requested
+evidence that would change the answer
+smallest useful output
+```
+
+Fail if the answer displays framework scaffolding but does not move the user's decision forward.
+
+## Clarification gate
+
+No broad questionnaire before the smallest blocking question.
+
+Ask only when missing information would change:
+
+```text
+deliverable
+decision
+scope
+risk
+first action
+```
+
+If the gap can be inspected locally, inspect first. If it can be assumed safely, proceed and label the assumption.
+
 ## Path gate
 
 No full plan before path.
@@ -120,6 +151,19 @@ alternative path
 
 When a key decision relies on C or D tier evidence, attempt verification before proceeding.
 
+External research is mandatory when the answer depends on:
+
+```text
+current versions
+APIs or docs
+regulations or rules
+prices or schedules
+security advisories
+market or company status
+third-party tool behavior
+source-backed public claims
+```
+
 Steps:
 
 1. Identify which C/D evidence would change the decision if upgraded
@@ -131,6 +175,9 @@ Rules:
 
 - Do not proceed with a key decision resting on D-tier evidence alone
 - At least one attempt to verify each critical C/D claim
+- Prefer official or primary sources before commentary
+- User requests for "latest", "verify", "search", or "cite" always trigger research
+- Local/user-provided material can stay local-only when no external changing fact affects the decision
 - If no search tools are available, skip the search and flag the gap explicitly
 
 ## Revenue gate
