@@ -2,7 +2,7 @@
 
 这个文件给人看。
 
-运行入口是根目录的 `SKILL.md`。
+这是中文精简参考版。完整运行入口是 `.agents/skills/Kim/SKILL.md`（Codex）和 `.claude/skills/Kim/SKILL.md`（Claude Code）。
 
 ## 核心规则
 

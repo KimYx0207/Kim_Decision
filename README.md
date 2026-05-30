@@ -160,28 +160,43 @@ KIM supports both Claude Code and Codex:
 - `.claude/skills/Kim/` is for Claude Code.
 - `.agents/skills/Kim/` is for Codex.
 
+Run install commands from this repository root.
+
 **Claude Code personal install** (available in every project):
 
 ```bash
-mkdir -p ~/.claude/skills && cp -R Kim ~/.claude/skills/Kim
+mkdir -p ~/.claude/skills
+cp -R .claude/skills/Kim ~/.claude/skills/Kim
 ```
 
-**Claude Code project install** (scoped to one repo):
+**Claude Code project install** (copy into another repo):
 
 ```bash
-mkdir -p .claude/skills && cp -R Kim .claude/skills/Kim
+TARGET_REPO=/path/to/project
+mkdir -p "$TARGET_REPO/.claude/skills"
+cp -R .claude/skills/Kim "$TARGET_REPO/.claude/skills/Kim"
 ```
 
 **Codex personal install** (available in every project):
 
 ```bash
-mkdir -p ~/.agents/skills && cp -R Kim ~/.agents/skills/Kim
+mkdir -p ~/.agents/skills
+cp -R .agents/skills/Kim ~/.agents/skills/Kim
 ```
 
-**Codex project install** (scoped to one repo):
+Enable Codex's native question surface in `~/.codex/config.toml`:
+
+```toml
+[features]
+default_mode_request_user_input = true
+```
+
+**Codex project install** (copy into another repo):
 
 ```bash
-mkdir -p .agents/skills && cp -R Kim .agents/skills/Kim
+TARGET_REPO=/path/to/project
+mkdir -p "$TARGET_REPO/.agents/skills"
+cp -R .agents/skills/Kim "$TARGET_REPO/.agents/skills/Kim"
 ```
 
 ### Trigger words

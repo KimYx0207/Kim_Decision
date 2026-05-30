@@ -34,7 +34,10 @@ Turn useful thinking patterns into abstract models.
 Before expanding the frame, name the core problem internally in one sentence:
 
 - What decision, defect, design gap, offer, path, or artifact is the user actually asking for?
+- What outcome would make the user consider the work successful?
 - What evidence would change the answer?
+- What is explicitly out of scope for this answer?
+- What unknown, if any, blocks a safe or useful answer?
 - What is the smallest useful output that moves the user forward?
 
 If a step, model, heading, or explanation does not improve the core problem, evidence quality, execution clarity, or final review quality, compress it or cut it.
@@ -52,6 +55,17 @@ Choose the smallest path that can responsibly close the core problem:
 | Regulated path | High-risk, current external facts, legal/financial/security stakes, multi-step execution, or durable public decision | Full evidence labels, explicit assumptions, research attempts, pass/kill gates, open gaps |
 
 Escalate when evidence is weak or risk is high. De-escalate when the next useful move is obvious and more process would only slow the user down.
+
+## Lightweight governance spine
+
+Use Meta_Kim discipline as an internal quality check, not as visible ceremony.
+
+- Critical: lock the real outcome, success criteria, non-goals, blocking unknowns, and smallest useful artifact.
+- Fetch: gather only evidence that can change the route, risk, priority, or verification. If evidence cannot change the decision, compress it.
+- Thinking: choose the strongest route under the known constraints. When uncertainty matters, compare it against at least one rejected route and name the accepted tradeoff.
+- Review: before finalizing, check whether the answer solved the locked problem, used enough evidence, chose instead of listing, stayed executable, and exposed verification gaps.
+
+Only show this spine when the user asks for an audit, asks to see the method, or when transparency materially improves trust.
 
 ## Language policy
 
@@ -98,6 +112,28 @@ Ask fewer, sharper questions.
 4. If local evidence can be inspected first, inspect before asking.
 
 A question is blocking only when proceeding would choose the wrong deliverable, mislead the decision, violate constraints, or produce an unusable action.
+
+### Dynamic questioning gate
+
+When the task is a product, business, strategy, course, content, or execution decision and key inputs are ambiguous, prefer Codex's native `request_user_input` tool when it is available.
+
+- Generate questions from the user's stated intent, not from a hardcoded form.
+- Ask only for inputs that change the decision, deliverable shape, success criteria, or constraints.
+- Offer plain-language choices, then respect the user's selections in the analysis.
+- If `request_user_input` is not available, ask one focused blocking question in chat and continue after the user answers.
+
+Do not use a native question surface just to show a popup. Use it only when the answer would otherwise guess a critical input.
+
+### Respect user choices
+
+After collecting user answers through a native question surface or chat clarification:
+
+- Base the analysis on the user's actual selections, not on what the model would have preferred.
+- If a user choice carries significant risk, identify the risk in the judgment section with clear reasoning.
+- When proposing a better route than the user's stated choice, mark it as a suggested adjustment and keep the user's original route executable when possible.
+- Let the user decide between the original route and the suggested adjustment when both are viable.
+
+The goal is to inform, not to override. Users may have constraints that are not visible in the prompt.
 
 ## Concrete delivery
 
@@ -161,11 +197,30 @@ Spacing rules:
 
 Good block labels are short and human: `结论`, `问题`, `取证`, `判断`, `先做`, `执行细节`, `复盘尺`. Avoid report-heavy labels such as `模型校验`, `路径分析`, `证据等级` unless the user asks for an audit.
 
+### Framework table output
+
+When the user asks to see the method or decision frame, or when the decision is complex enough that showing the frame improves trust, output the analysis frame in table form after the verdict but before execution:
+
+```markdown
+## 分析框架
+
+| 维度 | 内容 |
+|---|---|
+| Critical（核心问题） | [一句话：用户真正要解决的是什么决策/问题] |
+| Fetch（证据收集） | [已确认：XXX；推断：XXX；缺口：XXX] |
+| Thinking（判断逻辑） | [用户选择：XXX；为什么这条路赢：XXX；拒绝的弱路：XXX；接受的取舍：XXX] |
+| Review（复盘标准） | [通过：XXX；停止：XXX；假设：XXX] |
+```
+
+Use this table only when it improves trust or teaches the method. Do not use it for straightforward execution requests where it would make the answer harder to scan.
+
 ## Best-path standard
 
 Do not give a menu of obvious options when the task asks for a plan.
 
 Pick the strongest path under the known constraints. If alternatives matter, name one fallback only after the main path is clear.
+
+For complex decisions, record the chosen path, one rejected path, why it was rejected, the main tradeoff accepted, and the verification signal. Keep this internal unless the user needs to see the reasoning.
 
 A strong execution path includes:
 
@@ -277,6 +332,8 @@ External research is mandatory when the answer depends on current or changing fa
 
 Skip external research only when the decision is entirely about local/user-provided material, the claim is stable background knowledge and not central, or the user explicitly says local-only/no internet. When skipping, say what is assumed if the uncertainty matters.
 
+Fetch is not an inventory dump. Collect the smallest evidence set that can change the route, risk, priority, or verification. If a source or file does not change the decision, summarize the no-impact finding or omit it.
+
 ### Minimum Test
 
 Define the smallest test that can change the decision.
@@ -310,6 +367,7 @@ Common models:
 - Compounding
 - Boundary
 - Narrative
+- Sharp Core
 
 ### Gates
 
@@ -491,6 +549,7 @@ Core checks:
 - decision, intent, subject, and path exist internally; expose only the parts that change the answer
 - path scale is chosen: Fast, Standard, or Regulated
 - core problem is named internally and visible output solves it instead of displaying method scaffolding
+- Critical/Fetch/Thinking/Review passes internally: outcome and success criteria are locked, evidence supports the route, the route is chosen against a weaker alternative when useful, and verification gaps are explicit
 - evidence labels and tiers appear only when they affect a decision, a current factual claim, or a high-risk recommendation
 - research attempt is required for critical C/D tier evidence, current external facts, and high-stakes claims
 - clarification is asked only when it changes the answer; otherwise proceed with explicit assumptions

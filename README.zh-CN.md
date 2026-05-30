@@ -160,28 +160,43 @@ KIM 同时支持 Claude Code 和 Codex：
 - `.claude/skills/Kim/` 用于 Claude Code。
 - `.agents/skills/Kim/` 用于 Codex。
 
+安装命令请在本仓库根目录执行。
+
 **Claude Code 个人级安装**（所有项目可用）：
 
 ```bash
-mkdir -p ~/.claude/skills && cp -R Kim ~/.claude/skills/Kim
+mkdir -p ~/.claude/skills
+cp -R .claude/skills/Kim ~/.claude/skills/Kim
 ```
 
-**Claude Code 项目级安装**（仅限当前仓库）：
+**Claude Code 项目级安装**（复制到另一个仓库）：
 
 ```bash
-mkdir -p .claude/skills && cp -R Kim .claude/skills/Kim
+TARGET_REPO=/path/to/project
+mkdir -p "$TARGET_REPO/.claude/skills"
+cp -R .claude/skills/Kim "$TARGET_REPO/.claude/skills/Kim"
 ```
 
 **Codex 个人级安装**（所有项目可用）：
 
 ```bash
-mkdir -p ~/.agents/skills && cp -R Kim ~/.agents/skills/Kim
+mkdir -p ~/.agents/skills
+cp -R .agents/skills/Kim ~/.agents/skills/Kim
 ```
 
-**Codex 项目级安装**（仅限当前仓库）：
+在 `~/.codex/config.toml` 中启用 Codex 原生提问界面：
+
+```toml
+[features]
+default_mode_request_user_input = true
+```
+
+**Codex 项目级安装**（复制到另一个仓库）：
 
 ```bash
-mkdir -p .agents/skills && cp -R Kim .agents/skills/Kim
+TARGET_REPO=/path/to/project
+mkdir -p "$TARGET_REPO/.agents/skills"
+cp -R .agents/skills/Kim "$TARGET_REPO/.agents/skills/Kim"
 ```
 
 ### 触发词
