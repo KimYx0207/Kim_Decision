@@ -27,6 +27,22 @@ Most AI skills tell the model *what style to use*. KIM asks a different question
 
 > The point is simple: less inspirational advice, more decisions that can be tested.
 
+## Project info
+
+| Item | Value |
+|------|-------|
+| GitHub repository | [KimYx0207/Kim_Decision](https://github.com/KimYx0207/Kim_Decision) |
+| Local development path | `D:\KimProject\Kim_Decision` |
+| Runtime targets | Claude Code and Codex |
+| Claude Code package | `.claude/skills/Kim/` |
+| Codex package | `.agents/skills/Kim/` |
+| Skill name | `kim-decision` |
+| Common trigger words | `KIM`, `Kim`, `laojin`, `老金`, `问问老金` |
+| License | MIT OR Apache-2.0 |
+| Changelog | [CHANGELOG.md](CHANGELOG.md) |
+
+This repository is the public source for the KIM decision protocol. The GitHub README is the user-facing entry point; the skill directories are the runtime packages; `docs/zh-CN/` contains the Chinese reference materials used by the skill.
+
 Without a method, the model improvises. With KIM, every output follows one spine:
 
 ```mermaid
@@ -201,7 +217,7 @@ cp -R .agents/skills/Kim "$TARGET_REPO/.agents/skills/Kim"
 
 ### Trigger words
 
-The skill name is `laojin`. It should also be triggered by `KIM`, `Kim`, `老金`, and `问问老金`.
+The skill name is `kim-decision`. It should also be triggered by `KIM`, `Kim`, `laojin`, `老金`, and `问问老金`.
 
 Common Chinese trigger phrases include: `老金怎么看`, `帮我判断`, `重新想`, `仔细看`, `分析一下`, `这个能不能做`, `怎么变现`, `卖什么`, `怎么定价`, and `先做哪个验证`.
 
@@ -250,6 +266,10 @@ If KIM Skill has been useful, support the project with a coffee.
 <td align="center"><img src="docs/images/alipay.jpg" width="260" alt="Alipay QR"></td>
 </tr>
 </table>
+
+### Changelog
+
+For release notes and documentation updates, see [CHANGELOG.md](CHANGELOG.md).
 
 ### Method basis
 

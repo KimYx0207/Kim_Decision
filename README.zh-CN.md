@@ -27,6 +27,22 @@
 
 > 目标很简单：少一点热血建议，多一点能验证、能执行、能交付的判断。
 
+## 项目信息
+
+| 项目 | 内容 |
+|------|------|
+| GitHub仓库 | [KimYx0207/Kim_Decision](https://github.com/KimYx0207/Kim_Decision) |
+| 本地开发目录 | `D:\KimProject\Kim_Decision` |
+| 运行对象 | Claude Code 和 Codex |
+| Claude Code包 | `.claude/skills/Kim/` |
+| Codex包 | `.agents/skills/Kim/` |
+| Skill名称 | `kim-decision` |
+| 常用触发词 | `KIM`、`Kim`、`laojin`、`老金`、`问问老金` |
+| 开源协议 | MIT OR Apache-2.0 |
+| 更新日志 | [CHANGELOG.md](CHANGELOG.md) |
+
+这个仓库是老金判断协议的公开源代码。GitHub README 是用户第一眼看到的入口；`.claude/skills/Kim/` 和 `.agents/skills/Kim/` 是实际运行包；`docs/zh-CN/` 放中文参考资料，供 Skill 在执行时读取。
+
 没有方法，模型就是即兴发挥。有了老金，每个输出都沿着一条主干走：
 
 ```mermaid
@@ -201,7 +217,7 @@ cp -R .agents/skills/Kim "$TARGET_REPO/.agents/skills/Kim"
 
 ### 触发词
 
-Skill 名称是 `laojin`。也应该通过 `KIM`、`Kim`、`老金`、`问问老金` 触发。
+Skill 名称是 `kim-decision`。也应该通过 `KIM`、`Kim`、`laojin`、`老金`、`问问老金` 触发。
 
 常见中文触发句包括：`老金怎么看`、`帮我判断`、`重新想`、`仔细看`、`分析一下`、`这个能不能做`、`怎么变现`、`卖什么`、`怎么定价`、`先做哪个验证`。
 
@@ -250,6 +266,10 @@ X <a href="https://x.com/KimYx0207">@KimYx0207</a> |
 <td align="center"><img src="docs/images/alipay.jpg" width="260" alt="支付宝收款码"></td>
 </tr>
 </table>
+
+### 更新日志
+
+版本变化和文档调整记录在 [CHANGELOG.md](CHANGELOG.md)。
 
 ### 方法依据
 

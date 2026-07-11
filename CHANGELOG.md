@@ -4,6 +4,8 @@
 
 ### Added
 
+- Added public project-info sections to the English and Chinese READMEs, including the GitHub repository, local development path, runtime targets, skill package paths, trigger names, license, and changelog entry.
+- Added explicit changelog links near the contact/support sections so users can find release notes from the README.
 - Added a core-problem gate so KIM locks the actual decision or artifact before expanding the frame.
 - Added Fast / Standard / Regulated path scaling to keep simple decisions lightweight and reserve full evidence handling for higher-risk work.
 - Added clarification and research boundaries for smallest blocking questions, current external facts, official-source preference, and explicit local-only skips.
@@ -15,6 +17,7 @@
 
 ### Changed
 
+- Renamed the skill metadata name from `laojin` to `kim-decision` while keeping `laojin`, `KIM`, `Kim`, `老金`, and `问问老金` as trigger aliases.
 - Strengthened gates and verification so current/changing claims are searched or labeled before they drive a decision.
 - Updated Chinese skill docs to describe the core-problem gate, path scaling, clarification ladder, and external research boundary.
 - Reworked default output guidance so the full reasoning frame runs internally instead of appearing as a filled form.

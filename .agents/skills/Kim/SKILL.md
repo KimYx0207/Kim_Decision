@@ -1,5 +1,5 @@
 ---
-name: laojin
+name: kim-decision
 description: >
   Use when the user asks for KIM, Kim, laojin, 老金, 问问老金, 老金怎么看,
   asks for decision analysis, structured reasoning, product/business/content
