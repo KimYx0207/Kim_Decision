@@ -17,6 +17,8 @@
 
 </div>
 
+> 因合并关系，本仓库已迁入 [Kim Service](https://github.com/KimYx0207/Kim_Service) 合集，不再单独发布新版本。请前往 Kim Service 获取新版本、安装说明和更新记录。
+
 ## 简介
 
 **老金 Skill** 是一套把模糊问题变成可执行下一步的判断协议。

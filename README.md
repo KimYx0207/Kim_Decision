@@ -17,6 +17,8 @@
 
 </div>
 
+> This repository has been merged into [Kim Service](https://github.com/KimYx0207/Kim_Service) and no longer publishes standalone releases. Please use Kim Service for new versions, installation instructions, and release notes.
+
 ## Overview
 
 **KIM Skill** is a decision protocol for turning fuzzy questions into usable next actions.
